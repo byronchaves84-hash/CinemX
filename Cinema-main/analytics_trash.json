@@ -86,27 +86,5 @@
         "viewed_at": "2026-09-17T02:29:32.862281+00:00",
         "deleted_at": "2026-09-17T02:30:07.955644+00:00",
         "deleted_at_epoch": 1789612207.9556565
-    },
-    {
-        "id": "d3e02561-abeb-4c7e-a5aa-3e292874feca",
-        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
-        "content_id": "serie-3",
-        "title": "Breaking Bad",
-        "type": "serie",
-        "image": "http://localhost:8000/Cinema-main/images/serie3.jpg",
-        "url": "../Cinema-main/Serie3/index.html",
-        "video": "../Cinema-main/Serie3/index.html",
-        "year": "",
-        "genre": "Serie",
-        "duration": "",
-        "rating": "",
-        "season": "",
-        "episode": "",
-        "session_id": "RjMP6YYMRgm8RvK7AuWJz5rOOI4U7tUt4NOzM9g2uno",
-        "timestamp": "2026-09-17T02:29:34.465008+00:00",
-        "timestamp_epoch": 1789612174.465028,
-        "viewed_at": "2026-09-17T02:29:34.465028+00:00",
-        "deleted_at": "2026-09-17T02:30:10.213935+00:00",
-        "deleted_at_epoch": 1789612210.2139459
     }
 ]
