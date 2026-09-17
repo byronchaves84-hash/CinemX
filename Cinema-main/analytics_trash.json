@@ -20,27 +20,5 @@
         "viewed_at": "2026-09-17T02:29:40.958983+00:00",
         "deleted_at": "2026-09-17T22:56:58.108495+00:00",
         "deleted_at_epoch": 1789685818.1085048
-    },
-    {
-        "id": "adede69b-8383-4785-a769-840c49f4e58f",
-        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
-        "content_id": "serie-2",
-        "title": "The Last Of Us",
-        "type": "serie",
-        "image": "http://localhost:8000/Cinema-main/images/serie2.jpg",
-        "url": "../Cinema-main/Serie2/index.html",
-        "video": "../Cinema-main/Serie2/index.html",
-        "year": "",
-        "genre": "Serie",
-        "duration": "",
-        "rating": "",
-        "season": "",
-        "episode": "",
-        "session_id": "RjMP6YYMRgm8RvK7AuWJz5rOOI4U7tUt4NOzM9g2uno",
-        "timestamp": "2026-09-17T02:29:36.012971+00:00",
-        "timestamp_epoch": 1789612176.0129864,
-        "viewed_at": "2026-09-17T02:29:36.012986+00:00",
-        "deleted_at": "2026-09-17T22:57:00.536210+00:00",
-        "deleted_at_epoch": 1789685820.5362248
     }
 ]
