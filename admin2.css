@@ -5807,3 +5807,818 @@ th {
     }
 }
 
+
+
+
+
+/* =========================================================
+   RESPONSIVE COMPLETO — TABLET / MÓVIL
+   No altera el diseño de PC
+========================================================= */
+
+/* =========================================================
+   TABLETS — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    :root {
+        --sidebar-width: 210px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-card {
+        grid-column: span 6;
+    }
+
+    .dashboard-card.large {
+        grid-column: span 12;
+    }
+
+    .analytics-card {
+        grid-column: span 6;
+    }
+
+    .analytics-card.wide {
+        grid-column: span 12;
+    }
+
+    .support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   TABLETS PEQUEÑAS — 850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+    :root {
+        --topbar-height: 64px;
+        --sidebar-width: 190px;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .brand-logo {
+        font-size: 22px;
+    }
+
+    .admin-badge {
+        font-size: 9px;
+        padding: 4px 7px;
+    }
+
+    .top-user-info {
+        display: none;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .section-header h1 {
+        font-size: 26px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card,
+    .dashboard-card.large,
+    .dashboard-card.full {
+        grid-column: span 12;
+    }
+
+    .analytics-card,
+    .analytics-card.wide,
+    .analytics-card.full {
+        grid-column: span 12;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES — 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+        --topbar-height: 60px;
+    }
+
+    /* -------------------------
+       TOPBAR
+    ------------------------- */
+
+    .topbar {
+        height: 60px;
+        padding: 0 12px;
+    }
+
+    .brand {
+        gap: 7px;
+    }
+
+    .brand-logo {
+        font-size: 20px;
+    }
+
+    .admin-badge {
+        font-size: 8px;
+        padding: 4px 6px;
+    }
+
+    .logout-btn {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+       LAYOUT
+    ------------------------- */
+
+    .layout {
+        display: block;
+        min-height: auto;
+    }
+
+
+    /* -------------------------
+       SIDEBAR
+       Se convierte en barra
+       horizontal desplazable
+    ------------------------- */
+
+    .sidebar {
+        position: sticky;
+        top: 60px;
+
+        width: 100%;
+        height: auto;
+
+        padding: 8px 10px;
+
+        display: flex;
+        align-items: center;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+
+        z-index: 900;
+    }
+
+    .sidebar::after {
+        display: none;
+    }
+
+    .nav-title {
+        display: none;
+    }
+
+    .nav-btn {
+        width: auto;
+        min-width: max-content;
+
+        margin: 0 3px;
+
+        padding: 9px 13px;
+
+        border-radius: 9px;
+
+        white-space: nowrap;
+
+        font-size: 12px;
+    }
+
+    .nav-btn::before {
+        display: none;
+    }
+
+    .nav-btn:hover {
+        transform: none;
+    }
+
+
+    /* -------------------------
+       CONTENT
+    ------------------------- */
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 18px 12px;
+    }
+
+
+    /* -------------------------
+       SECTION HEADER
+    ------------------------- */
+
+    .section-header {
+        margin-bottom: 18px;
+        gap: 12px;
+    }
+
+    .section-header h1 {
+        font-size: 23px;
+    }
+
+    .section-header p {
+        font-size: 12px;
+    }
+
+
+    /* -------------------------
+       BOTONES
+    ------------------------- */
+
+    .btn {
+        min-height: 42px;
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+
+    /* -------------------------
+       STATS
+    ------------------------- */
+
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .stat-card {
+        min-height: 125px;
+        padding: 15px;
+    }
+
+    .stat-value {
+        font-size: 26px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .stat-icon {
+        width: 34px;
+        height: 34px;
+
+        top: 12px;
+        right: 12px;
+
+        font-size: 15px;
+    }
+
+
+    /* -------------------------
+       PANELES
+    ------------------------- */
+
+    .panel {
+        padding: 14px;
+        margin-bottom: 14px;
+        border-radius: 12px;
+    }
+
+    .panel-title {
+        font-size: 15px;
+    }
+
+
+    /* -------------------------
+       TOOLBAR
+    ------------------------- */
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+    }
+
+    .toolbar select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .toolbar .btn {
+        width: 100%;
+    }
+
+
+    /* -------------------------
+       FORMULARIOS
+    ------------------------- */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    input,
+    textarea,
+    select {
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+
+    /* -------------------------
+       TABLAS
+       Mantiene scroll horizontal
+       ------------------------- */
+
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    th,
+    td {
+        padding: 11px 9px;
+        font-size: 12px;
+    }
+
+
+    /* -------------------------
+       CATÁLOGO
+    ------------------------- */
+
+    .catalog-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .catalog-card {
+        min-height: 0;
+        border-radius: 11px;
+    }
+
+    .catalog-card-title {
+        font-size: 12px;
+    }
+
+    .catalog-card-meta {
+        font-size: 10px;
+    }
+
+    .catalog-card-overlay {
+        padding: 40px 9px 9px;
+    }
+
+
+    /* -------------------------
+       POSTERS
+    ------------------------- */
+
+    .poster-preview {
+        width: 70px;
+        height: 95px;
+    }
+
+    .poster-thumb {
+        width: 42px;
+        height: 58px;
+    }
+
+
+    /* -------------------------
+       USUARIOS
+    ------------------------- */
+
+    .user-row {
+        gap: 8px;
+    }
+
+    .user-avatar {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+    }
+
+    .user-info strong {
+        font-size: 12px;
+    }
+
+    .user-info small {
+        font-size: 10px;
+    }
+
+
+    /* -------------------------
+       ACTIVIDAD
+    ------------------------- */
+
+    .activity-item {
+        gap: 9px;
+        padding: 11px 0;
+    }
+
+    .activity-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    .activity-content strong {
+        font-size: 12px;
+    }
+
+    .activity-content small {
+        font-size: 10px;
+    }
+
+    .activity-time {
+        font-size: 9px;
+    }
+
+
+    /* -------------------------
+       MODALES
+    ------------------------- */
+
+    .modal {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .modal-box {
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100vh - 20px);
+
+        padding: 16px;
+
+        border-radius: 13px;
+    }
+
+    .modal-header {
+        gap: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+
+    .modal-header h2 {
+        font-size: 17px;
+    }
+
+    .modal-close {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    #episodesModal .modal-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* -------------------------
+       EPISODIOS
+    ------------------------- */
+
+    .episode-row {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .season-card {
+        padding: 12px;
+    }
+
+    .season-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    /* -------------------------
+       FEATURED
+    ------------------------- */
+
+    .featured-content {
+        min-height: 300px;
+    }
+
+    .featured-content-info {
+        max-width: 100%;
+        padding: 24px 18px;
+    }
+
+    .featured-content-title {
+        font-size: 23px;
+    }
+
+    .featured-content-description {
+        font-size: 12px;
+    }
+
+
+    /* -------------------------
+       TOAST
+    ------------------------- */
+
+    #toast {
+        left: 12px;
+        right: 12px;
+
+        bottom: 12px;
+
+        min-width: 0;
+        max-width: none;
+
+        font-size: 12px;
+    }
+
+
+    /* -------------------------
+       ALERTAS
+    ------------------------- */
+
+    .alert {
+        padding: 11px 12px;
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+       MÉTRICAS
+    ------------------------- */
+
+    .metric-row {
+        gap: 10px;
+    }
+
+    .metric-name,
+    .metric-value {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .brand-logo {
+        font-size: 18px;
+    }
+
+    .admin-badge {
+        display: none;
+    }
+
+    .logout-btn {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 14px 9px;
+    }
+
+    .section-header h1 {
+        font-size: 21px;
+    }
+
+    .section-header p {
+        font-size: 11px;
+    }
+
+
+    /* Stats en una sola columna si
+       el teléfono es muy pequeño */
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .stat-card {
+        min-height: 110px;
+        padding: 12px;
+    }
+
+    .stat-value {
+        font-size: 23px;
+    }
+
+    .stat-icon {
+        width: 30px;
+        height: 30px;
+
+        top: 9px;
+        right: 9px;
+
+        font-size: 13px;
+    }
+
+
+    /* Catálogo */
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .catalog-card-title {
+        font-size: 11px;
+    }
+
+    .catalog-card-meta {
+        font-size: 9px;
+    }
+
+
+    /* Panel */
+
+    .panel {
+        padding: 12px;
+    }
+
+
+    /* Botones */
+
+    .btn {
+        width: 100%;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .actions .btn {
+        width: 100%;
+    }
+
+
+    /* Modal */
+
+    .modal-box {
+        padding: 13px;
+    }
+
+    .modal-header h2 {
+        font-size: 16px;
+    }
+
+
+    /* Login */
+
+    .login-box {
+        width: 100%;
+        padding: 25px 18px;
+    }
+
+    .login-box .logo {
+        font-size: 34px;
+    }
+
+    .login-box h1 {
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES MUY PEQUEÑOS — 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .topbar {
+        padding: 0 8px;
+    }
+
+    .brand-logo {
+        font-size: 16px;
+    }
+
+    .logout-btn {
+        font-size: 9px;
+        padding: 6px 8px;
+    }
+
+    .content {
+        padding: 12px 7px;
+    }
+
+    .stats {
+        gap: 6px;
+    }
+
+    .stat-card {
+        min-height: 100px;
+        padding: 10px;
+    }
+
+    .stat-value {
+        font-size: 21px;
+    }
+
+    .stat-label {
+        font-size: 9px;
+    }
+
+    .catalog-grid {
+        gap: 6px;
+    }
+
+    .nav-btn {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   Quita efectos hover incómodos en celulares
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .btn:hover,
+    .stat-card:hover,
+    .catalog-card:hover,
+    .dashboard-card:hover,
+    .support-card:hover {
+        transform: none;
+    }
+
+    .nav-btn:hover {
+        transform: none;
+    }
+
+    .modal-close:hover {
+        transform: none;
+    }
+}
