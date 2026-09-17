@@ -1,0 +1,242 @@
+[
+    {
+        "id": "ca0dbe9c-8ac9-4ce2-91fc-9b44b6a6de0c",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "admin2",
+        "user_id": "admin-002",
+        "date": "2026-09-17T03:01:21.579Z"
+    },
+    {
+        "id": "16991c78-2823-4271-8af4-9bff14ff9db1",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "admin2",
+        "user_id": "admin-002",
+        "date": "2026-09-17T03:01:17.971Z"
+    },
+    {
+        "id": "15f46c4c-022e-4393-b18b-1bac6cd45be8",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "admin2",
+        "user_id": "admin-002",
+        "date": "2026-09-17T03:01:15.427Z"
+    },
+    {
+        "id": "5bbf083c-ce8b-4567-9b62-620d3f01bd40",
+        "action": "Sesión de usuario desconectada",
+        "detail": "car",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:32:07.250Z"
+    },
+    {
+        "id": "d6cd22de-5496-47c9-b308-50bf4550ead2",
+        "action": "Favorito enviado a papelera",
+        "detail": "Película 5",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:31:32.988Z"
+    },
+    {
+        "id": "0f2604d6-8e96-4a6e-a9f2-9dc9000d4122",
+        "action": "Visualización enviada a papelera",
+        "detail": "Peaky Blinders",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:30:26.652Z"
+    },
+    {
+        "id": "1c92457a-dbbe-4229-80fd-aec982ca3300",
+        "action": "Visualización enviada a papelera",
+        "detail": "Breaking Bad",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:30:10.219Z"
+    },
+    {
+        "id": "bd1a14e7-6140-43ba-862e-80ad5a856989",
+        "action": "Visualización enviada a papelera",
+        "detail": "13 Reasons Why",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:30:07.960Z"
+    },
+    {
+        "id": "2c2afa51-825d-4270-8cd4-16fd82e117c5",
+        "action": "Visualización enviada a papelera",
+        "detail": "AliasJJ",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:30:06.295Z"
+    },
+    {
+        "id": "318228f6-e381-4c49-baf8-3442fd59b516",
+        "action": "Visualización enviada a papelera",
+        "detail": "La Última Señal",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:30:04.098Z"
+    },
+    {
+        "id": "ed410649-cdaa-4b4d-904d-ec8f40430584",
+        "action": "Visualización enviada a papelera",
+        "detail": "Peaky Blinders",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:30:01.991Z"
+    },
+    {
+        "id": "a75cd70b-b206-46b4-8d3b-474b9e96dece",
+        "action": "Sesión de usuario desconectada",
+        "detail": "test",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:27:01.847Z"
+    },
+    {
+        "id": "9b441d23-a98d-42cd-be32-8827338d2c23",
+        "action": "Sesión de usuario desconectada",
+        "detail": "car",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-17T02:22:45.723Z"
+    },
+    {
+        "id": "89524fb5-a5ed-445e-a2e2-821f8fc74acd",
+        "action": "Sesión de usuario desconectada",
+        "detail": "car",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:25:02.587Z"
+    },
+    {
+        "id": "05bf8eda-dd9c-46f8-853c-88b1b010e0d6",
+        "action": "Sesión de usuario desconectada",
+        "detail": "car",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:24:58.749Z"
+    },
+    {
+        "id": "e61efb99-3b8f-4e18-b70a-860e0b6d9ef3",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:28.400Z"
+    },
+    {
+        "id": "ef0e0089-dd8d-460d-aeb1-2491db919ecf",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:26.988Z"
+    },
+    {
+        "id": "faec104d-2327-4cb7-9bf8-46113dc2d616",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:25.684Z"
+    },
+    {
+        "id": "c465d660-2a42-4564-86b0-29949829316b",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:24.450Z"
+    },
+    {
+        "id": "465db35d-4844-427d-b3c3-595063f16f92",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:22.567Z"
+    },
+    {
+        "id": "728410f5-b702-4672-8663-c19deee77f41",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:18.150Z"
+    },
+    {
+        "id": "62f57a0d-7215-46a9-aa22-43c3ab2c594a",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:16.568Z"
+    },
+    {
+        "id": "910cd6cf-952f-48c2-aace-35270efe1030",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:15.396Z"
+    },
+    {
+        "id": "e200b882-ff63-42d3-8079-4b0f06391a03",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:13.891Z"
+    },
+    {
+        "id": "f6ec6b49-46ff-491a-9f37-21550f2d5048",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:12.162Z"
+    },
+    {
+        "id": "0e917551-cbdb-4d4e-a92c-260090ed8b5b",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:10.717Z"
+    },
+    {
+        "id": "e7ca8381-7127-4be7-85d3-45efc401a082",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:08.898Z"
+    },
+    {
+        "id": "3ece4354-95ee-4483-8375-613fface7643",
+        "action": "Sesión de usuario desconectada",
+        "detail": "Byron",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:23:05.659Z"
+    },
+    {
+        "id": "39a737b2-2534-4d3e-8089-aad9672440f9",
+        "action": "Sesión de usuario desconectada",
+        "detail": "car",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:22:58.062Z"
+    },
+    {
+        "id": "29c6ffd5-6f36-43ba-9be8-79eb134e6add",
+        "action": "Sesión de usuario desconectada",
+        "detail": "car",
+        "username": "Byron",
+        "user_id": "admin-001",
+        "date": "2026-09-16T23:22:56.279Z"
+    }
+]
