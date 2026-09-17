@@ -108,27 +108,5 @@
         "viewed_at": "2026-09-17T02:29:34.465028+00:00",
         "deleted_at": "2026-09-17T02:30:10.213935+00:00",
         "deleted_at_epoch": 1789612210.2139459
-    },
-    {
-        "id": "bf4f86a7-29ce-4d93-8a3a-bdc3e0fcf100",
-        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
-        "content_id": "serie-8",
-        "title": "Peaky Blinders",
-        "type": "Serie",
-        "image": "../Cinema-main/images/serie8.jpg",
-        "url": "../Cinema-main/Serie8/index.html",
-        "video": "https://drive.google.com/file/d/1NXL8zoZXPkyJHbcerpBpGxWdt8ORbQZi/preview",
-        "year": "",
-        "genre": "Serie",
-        "duration": "",
-        "rating": "",
-        "season": 1,
-        "episode": 1,
-        "session_id": "RjMP6YYMRgm8RvK7AuWJz5rOOI4U7tUt4NOzM9g2uno",
-        "timestamp": "2026-09-17T02:29:41.928312+00:00",
-        "timestamp_epoch": 1789612181.9283252,
-        "viewed_at": "2026-09-17T02:29:41.928325+00:00",
-        "deleted_at": "2026-09-17T02:30:26.646691+00:00",
-        "deleted_at_epoch": 1789612226.6467023
     }
 ]
