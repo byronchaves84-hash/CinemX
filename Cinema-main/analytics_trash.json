@@ -64,27 +64,5 @@
         "viewed_at": "2026-09-17T02:29:20.185211+00:00",
         "deleted_at": "2026-09-17T02:30:06.290510+00:00",
         "deleted_at_epoch": 1789612206.2905219
-    },
-    {
-        "id": "bd1230ff-bc07-4b2a-9fd4-d5da46351322",
-        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
-        "content_id": "serie-4",
-        "title": "13 Reasons Why",
-        "type": "serie",
-        "image": "http://localhost:8000/Cinema-main/images/serie4.jpg",
-        "url": "../Cinema-main/Serie%204/index.html",
-        "video": "",
-        "year": "2017",
-        "genre": "Suicidio",
-        "duration": "",
-        "rating": "8.4",
-        "season": "",
-        "episode": "",
-        "session_id": "RjMP6YYMRgm8RvK7AuWJz5rOOI4U7tUt4NOzM9g2uno",
-        "timestamp": "2026-09-17T02:29:32.862269+00:00",
-        "timestamp_epoch": 1789612172.8622806,
-        "viewed_at": "2026-09-17T02:29:32.862281+00:00",
-        "deleted_at": "2026-09-17T02:30:07.955644+00:00",
-        "deleted_at_epoch": 1789612207.9556565
     }
 ]
