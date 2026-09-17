@@ -26,211 +26,252 @@
 
 <body>
 
+<main class="intro">
 
-    <main class="intro">
+
+    <!-- =================================================
+         FONDO
+    ================================================== -->
+
+    <div class="background-glow"></div>
+
+    <div class="light-beam beam-one"></div>
+
+    <div class="light-beam beam-two"></div>
+
+    <div class="light-beam beam-three"></div>
+
+
+    <!-- =================================================
+         ATMÓSFERA CENTRAL
+    ================================================== -->
+
+    <div class="red-haze"></div>
+
+    <div class="center-light"></div>
+
+
+    <!-- =================================================
+         PARTÍCULAS
+    ================================================== -->
+
+    <div class="particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- =================================================
+         ROLLO DE PELÍCULA DECORATIVO
+    ================================================== -->
+
+    <div class="film-reel">
+
+        <div class="reel-center"></div>
+
+        <div class="reel-hole hole-one"></div>
+        <div class="reel-hole hole-two"></div>
+        <div class="reel-hole hole-three"></div>
+        <div class="reel-hole hole-four"></div>
+        <div class="reel-hole hole-five"></div>
+        <div class="reel-hole hole-six"></div>
+
+    </div>
+
+
+    <!-- =================================================
+         LÍNEAS CINEMATOGRÁFICAS
+    ================================================== -->
+
+    <div class="cinema-lines">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- =================================================
+         LUCES LATERALES
+    ================================================== -->
+
+    <div class="side-light side-light-left"></div>
+
+    <div class="side-light side-light-right"></div>
+
+
+    <!-- =================================================
+         LOGO
+    ================================================== -->
+
+    <section class="logo-container">
+
+
+        <!-- AURA -->
+
+        <div class="logo-aura"></div>
+
+
+        <!-- LOGO PRINCIPAL -->
+
+        <div class="logo">
+
+            <span class="logo-text">
+
+                <span class="logo-letter">C</span>
+                <span class="logo-letter">I</span>
+                <span class="logo-letter">N</span>
+                <span class="logo-letter">E</span>
+                <span class="logo-letter">M</span>
+                <span class="logo-letter">A</span>
+                <span class="logo-letter">X</span>
+
+            </span>
+
+
+            <!-- REFLEJO -->
+
+            <span class="logo-reflection"></span>
+
+
+            <!-- BRILLO -->
+
+            <span class="logo-shine"></span>
+
+        </div>
 
 
         <!-- =================================================
-             FONDO
+             LÍNEA
         ================================================== -->
 
-        <div class="background-glow"></div>
+        <div class="logo-line">
 
-        <div class="light-beam beam-one"></div>
-
-        <div class="light-beam beam-two"></div>
-
-        <div class="light-beam beam-three"></div>
-
-
-        <!-- =================================================
-             PARTÍCULAS
-        ================================================== -->
-
-        <div class="particles">
-
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
             <span></span>
 
         </div>
 
 
         <!-- =================================================
-             ROLLO DE PELÍCULA DECORATIVO
+             TAGLINE
         ================================================== -->
 
-        <div class="film-reel">
+        <div class="tagline">
 
-            <div class="reel-center"></div>
+            <span>TU CINE.</span>
 
-            <div class="reel-hole hole-one"></div>
-            <div class="reel-hole hole-two"></div>
-            <div class="reel-hole hole-three"></div>
-            <div class="reel-hole hole-four"></div>
-            <div class="reel-hole hole-five"></div>
-            <div class="reel-hole hole-six"></div>
+            <span>TU MUNDO.</span>
 
         </div>
 
 
-        <!-- =================================================
-             LÍNEAS CINEMATOGRÁFICAS
-        ================================================== -->
-
-        <div class="cinema-lines">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </div>
+    </section>
 
 
-        <!-- =================================================
-             LOGO
-        ================================================== -->
+    <!-- =================================================
+         BARRAS CINEMATOGRÁFICAS
+    ================================================== -->
 
-        <section class="logo-container">
+    <div class="cinematic-bars top-bar"></div>
 
-
-            <div class="logo-aura"></div>
-
-
-            <div class="logo">
-
-                <span class="logo-text">
-                    CINEMAX
-                </span>
-
-                <span class="logo-reflection"></span>
-
-                <span class="logo-shine"></span>
-
-            </div>
+    <div class="cinematic-bars bottom-bar"></div>
 
 
-            <div class="logo-line">
+    <!-- =================================================
+         FLASH
+    ================================================== -->
 
-                <span></span>
-
-            </div>
-
-
-            <div class="tagline">
-
-                <span>TU CINE.</span>
-
-                <span>TU MUNDO.</span>
-
-            </div>
+    <div class="screen-flash"></div>
 
 
-        </section>
+</main>
 
 
-        <!-- =================================================
-             BARRAS CINEMATOGRÁFICAS
-        ================================================== -->
-
-        <div class="cinematic-bars top-bar"></div>
-
-        <div class="cinematic-bars bottom-bar"></div>
+<script>
 
 
-        <!-- =================================================
-             FLASH
-        ================================================== -->
-
-        <div class="screen-flash"></div>
+    /* =================================================
+       INTRO CINEMAX
+    ================================================= */
 
 
-    </main>
+    window.addEventListener(
+        "load",
+        () => {
 
 
-    <script>
+            const intro =
+                document.querySelector(".intro");
 
 
-        /* =================================================
-           INTRO CINEMAX
-        ================================================= */
+            /*
+             * Activar la animación
+             */
+
+            setTimeout(
+                () => {
+
+                    intro.classList.add(
+                        "started"
+                    );
+
+                },
+                100
+            );
 
 
-        window.addEventListener(
-            "load",
-            () => {
+            /*
+             * Comenzar salida
+             */
+
+            setTimeout(
+                () => {
+
+                    intro.classList.add(
+                        "exit"
+                    );
+
+                },
+                4000
+            );
 
 
-                const intro =
-                    document.querySelector(".intro");
+            /*
+             * Entrar al LOGIN
+             */
+
+            setTimeout(
+                () => {
+
+                    window.location.href =
+                        "login.html";
+
+                },
+                4900
+            );
 
 
-                /*
-                 * Activar la animación
-                 */
-
-                setTimeout(
-                    () => {
-
-                        intro.classList.add(
-                            "started"
-                        );
-
-                    },
-                    100
-                );
+        }
+    );
 
 
-                /*
-                 * Comenzar salida
-                 */
-
-                setTimeout(
-                    () => {
-
-                        intro.classList.add(
-                            "exit"
-                        );
-
-                    },
-                    4000
-                );
-
-
-                /*
-                 * Entrar al LOGIN
-                 */
-
-                setTimeout(
-                    () => {
-
-                        window.location.href =
-                            "login.html";
-
-                    },
-                    4900
-                );
-
-
-            }
-        );
-
-
-    </script>
-
+</script>
 
 </body>
 
