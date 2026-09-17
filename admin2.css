@@ -6757,3 +6757,363 @@ th {
         transform: none;
     }
 }
+
+
+
+
+/* =========================================================
+   CINEMAX ADMIN 2
+   CORRECCIÓN MÓVIL REAL
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    /* -----------------------------------------------------
+       EVITAR DESBORDAMIENTO HORIZONTAL
+    ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        max-width: 100%;
+    }
+
+    /* -----------------------------------------------------
+       LAYOUT PRINCIPAL
+    ----------------------------------------------------- */
+
+    .layout {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* -----------------------------------------------------
+       SIDEBAR
+    ----------------------------------------------------- */
+
+    .sidebar {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* -----------------------------------------------------
+       CONTENIDO
+    ----------------------------------------------------- */
+
+    .content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 18px !important;
+
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    /* -----------------------------------------------------
+       TOPBAR
+    ----------------------------------------------------- */
+
+    .topbar {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+    }
+
+    /* -----------------------------------------------------
+       PANELES
+    ----------------------------------------------------- */
+
+    .panel,
+    .welcome-panel,
+    .section,
+    .card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* -----------------------------------------------------
+       HEADERS
+    ----------------------------------------------------- */
+
+    .panel-header,
+    .section-header {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        flex-wrap: wrap;
+    }
+
+    /* -----------------------------------------------------
+       STATS
+    ----------------------------------------------------- */
+
+    .stats {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 12px !important;
+    }
+
+    .stat-card {
+        min-width: 0 !important;
+        width: 100% !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* -----------------------------------------------------
+       DASHBOARD
+    ----------------------------------------------------- */
+
+    .dashboard-grid,
+    .analytics-grid,
+    .settings-grid,
+    .support-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* -----------------------------------------------------
+       FORMULARIOS
+    ----------------------------------------------------- */
+
+    .form-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        min-width: 0 !important;
+    }
+
+    .form-group,
+    .form-control,
+    input,
+    select,
+    textarea {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* -----------------------------------------------------
+       TABLAS
+    ----------------------------------------------------- */
+
+    .table-container {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: auto !important;
+
+        box-sizing: border-box !important;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    /* -----------------------------------------------------
+       BOTONES
+    ----------------------------------------------------- */
+
+    .btn {
+        box-sizing: border-box !important;
+        max-width: 100%;
+    }
+
+    .btn-small {
+        min-height: 34px;
+        padding: 7px 9px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    /* -----------------------------------------------------
+       BOTONES DE ACCIONES
+    ----------------------------------------------------- */
+
+    .table-container td:last-child {
+        white-space: nowrap;
+    }
+
+    .table-container .btn,
+    .table-container button {
+        max-width: none !important;
+
+        min-height: 32px;
+
+        padding: 6px 9px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+    }
+
+    /* -----------------------------------------------------
+       MODALES
+    ----------------------------------------------------- */
+
+    .modal {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 15px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .modal-box {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        margin: 0 auto !important;
+    }
+
+    /* -----------------------------------------------------
+       CATALOG GRID
+    ----------------------------------------------------- */
+
+    .catalog-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        grid-template-columns: repeat(
+            2,
+            minmax(0, 1fr)
+        ) !important;
+    }
+
+    /* -----------------------------------------------------
+       ELEMENTOS FLEXIBLES
+    ----------------------------------------------------- */
+
+    .toolbar {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        flex-wrap: wrap !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* -----------------------------------------------------
+       IMÁGENES
+    ----------------------------------------------------- */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* -----------------------------------------------------
+       TEXTO
+    ----------------------------------------------------- */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .content {
+        padding: 14px !important;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
+    .panel,
+    .welcome-panel,
+    .section {
+        padding: 15px !important;
+    }
+
+    .btn {
+        min-height: 38px;
+    }
+
+    .table-container .btn,
+    .table-container button {
+        min-height: 30px;
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   SEGURIDAD EXTRA CONTRA OVERFLOW
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .layout,
+    .content,
+    .sidebar,
+    .topbar,
+    main,
+    section,
+    article,
+    div {
+        min-width: 0;
+    }
+
+}
