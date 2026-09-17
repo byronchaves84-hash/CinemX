@@ -6622,3 +6622,138 @@ th {
         transform: none;
     }
 }
+
+
+
+
+/* =========================================================
+   RESPONSIVE — BOTONES DE ACCIONES / PAPELERAS
+========================================================= */
+
+@media (max-width: 750px) {
+
+    /* Todos los botones pequeños */
+    .btn-small {
+        min-height: 34px;
+        padding: 7px 9px;
+        font-size: 10px;
+        gap: 5px;
+        white-space: nowrap;
+    }
+
+    /* Botones normales */
+    .btn {
+        min-height: 38px;
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    /* Botones dentro de tablas */
+    .table-container .btn,
+    .table-container button {
+        min-height: 32px;
+        padding: 6px 9px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    /* Contenedor de acciones de las tablas */
+    .table-container td:last-child {
+        white-space: nowrap;
+    }
+
+    .table-container td:last-child > *,
+    .table-container td:last-child button {
+        margin: 2px;
+    }
+
+    /* Grupos de botones */
+    .panel-header > div:last-child {
+        width: 100%;
+    }
+
+    .panel-header > div:last-child .btn {
+        flex: 1;
+    }
+
+    /* Papeleras: botones Actualizar / Vaciar */
+    .panel-header {
+        gap: 14px;
+    }
+
+    /* Mantener los botones alineados */
+    .panel-header > div[style*="display:flex"] {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100%;
+        gap: 7px !important;
+    }
+
+    .panel-header > div[style*="display:flex"] .btn {
+        flex: 1 1 auto;
+        min-width: 130px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* Botones de acciones más pequeños */
+    .table-container .btn,
+    .table-container button {
+        min-height: 30px;
+        padding: 6px 8px;
+        font-size: 9px;
+        border-radius: 7px;
+    }
+
+    /* Si el botón solo tiene icono, no lo hacemos enorme */
+    .table-container button i:only-child {
+        margin: 0;
+    }
+
+    /* Botones de cabecera de Papeleras */
+    .panel-header > div[style*="display:flex"] {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .panel-header > div[style*="display:flex"] .btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Acciones de actividad */
+    .section-header > div[style*="display:flex"] {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .section-header > div[style*="display:flex"] .btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   TOUCH — EVITAR EFECTOS RAROS EN CELULAR
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .btn:active {
+        transform: scale(.98);
+    }
+
+    .nav-btn:hover {
+        transform: none;
+    }
+
+    .logout-btn:hover {
+        transform: none;
+    }
+}
