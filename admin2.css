@@ -5806,1021 +5806,195 @@ th {
         display: none;
     }
 }
-
-
-
-
-
-/* =========================================================
-   RESPONSIVE COMPLETO — TABLET / MÓVIL
-   No altera el diseño de PC
-========================================================= */
-
-/* =========================================================
-   TABLETS — 1100px
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    :root {
-        --sidebar-width: 210px;
-    }
-
-    .content {
-        padding: 24px;
-    }
-
-    .stats {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .dashboard-card {
-        grid-column: span 6;
-    }
-
-    .dashboard-card.large {
-        grid-column: span 12;
-    }
-
-    .analytics-card {
-        grid-column: span 6;
-    }
-
-    .analytics-card.wide {
-        grid-column: span 12;
-    }
-
-    .support-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* =========================================================
-   TABLETS PEQUEÑAS — 850px
-========================================================= */
-
-@media (max-width: 850px) {
-
-    :root {
-        --topbar-height: 64px;
-        --sidebar-width: 190px;
-    }
-
-    .topbar {
-        padding: 0 18px;
-    }
-
-    .brand-logo {
-        font-size: 22px;
-    }
-
-    .admin-badge {
-        font-size: 9px;
-        padding: 4px 7px;
-    }
-
-    .top-user-info {
-        display: none;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .section-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .section-header h1 {
-        font-size: 26px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .settings-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .support-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .dashboard-card,
-    .dashboard-card.large,
-    .dashboard-card.full {
-        grid-column: span 12;
-    }
-
-    .analytics-card,
-    .analytics-card.wide,
-    .analytics-card.full {
-        grid-column: span 12;
-    }
-}
-
-
-/* =========================================================
-   MÓVILES — 700px
-========================================================= */
-
-@media (max-width: 700px) {
-
-    :root {
-        --topbar-height: 60px;
-    }
-
-    /* -------------------------
-       TOPBAR
-    ------------------------- */
-
-    .topbar {
-        height: 60px;
-        padding: 0 12px;
-    }
-
-    .brand {
-        gap: 7px;
-    }
-
-    .brand-logo {
-        font-size: 20px;
-    }
-
-    .admin-badge {
-        font-size: 8px;
-        padding: 4px 6px;
-    }
-
-    .logout-btn {
-        padding: 8px 10px;
-        font-size: 11px;
-    }
-
-
-    /* -------------------------
-       LAYOUT
-    ------------------------- */
-
-    .layout {
-        display: block;
-        min-height: auto;
-    }
-
-
-    /* -------------------------
-       SIDEBAR
-       Se convierte en barra
-       horizontal desplazable
-    ------------------------- */
-
-    .sidebar {
-        position: sticky;
-        top: 60px;
-
-        width: 100%;
-        height: auto;
-
-        padding: 8px 10px;
-
-        display: flex;
-        align-items: center;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-
-        z-index: 900;
-    }
-
-    .sidebar::after {
-        display: none;
-    }
-
-    .nav-title {
-        display: none;
-    }
-
-    .nav-btn {
-        width: auto;
-        min-width: max-content;
-
-        margin: 0 3px;
-
-        padding: 9px 13px;
-
-        border-radius: 9px;
-
-        white-space: nowrap;
-
-        font-size: 12px;
-    }
-
-    .nav-btn::before {
-        display: none;
-    }
-
-    .nav-btn:hover {
-        transform: none;
-    }
-
-
-    /* -------------------------
-       CONTENT
-    ------------------------- */
-
-    .content {
-        width: 100%;
-        max-width: 100%;
-
-        padding: 18px 12px;
-    }
-
-
-    /* -------------------------
-       SECTION HEADER
-    ------------------------- */
-
-    .section-header {
-        margin-bottom: 18px;
-        gap: 12px;
-    }
-
-    .section-header h1 {
-        font-size: 23px;
-    }
-
-    .section-header p {
-        font-size: 12px;
-    }
-
-
-    /* -------------------------
-       BOTONES
-    ------------------------- */
-
-    .btn {
-        min-height: 42px;
-        padding: 10px 13px;
-        font-size: 12px;
-    }
-
-    .form-actions {
-        flex-direction: column;
-    }
-
-    .form-actions .btn {
-        width: 100%;
-    }
-
-
-    /* -------------------------
-       STATS
-    ------------------------- */
-
-    .stats {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        margin-bottom: 18px;
-    }
-
-    .stat-card {
-        min-height: 125px;
-        padding: 15px;
-    }
-
-    .stat-value {
-        font-size: 26px;
-    }
-
-    .stat-label {
-        font-size: 10px;
-    }
-
-    .stat-icon {
-        width: 34px;
-        height: 34px;
-
-        top: 12px;
-        right: 12px;
-
-        font-size: 15px;
-    }
-
-
-    /* -------------------------
-       PANELES
-    ------------------------- */
-
-    .panel {
-        padding: 14px;
-        margin-bottom: 14px;
-        border-radius: 12px;
-    }
-
-    .panel-title {
-        font-size: 15px;
-    }
-
-
-    /* -------------------------
-       TOOLBAR
-    ------------------------- */
-
-    .toolbar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search {
-        width: 100%;
-        min-width: 0;
-        flex: none;
-    }
-
-    .toolbar select {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .toolbar .btn {
-        width: 100%;
-    }
-
-
-    /* -------------------------
-       FORMULARIOS
-    ------------------------- */
-
-    .form-grid {
-        grid-template-columns: 1fr;
-        gap: 13px;
-    }
-
-    input,
-    textarea,
-    select {
-        min-height: 44px;
-        font-size: 14px;
-    }
-
-    textarea {
-        min-height: 100px;
-    }
-
-
-    /* -------------------------
-       TABLAS
-       Mantiene scroll horizontal
-       ------------------------- */
-
-    .table-wrapper {
-        width: 100%;
-        overflow-x: auto;
-
-        -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-        min-width: 650px;
-    }
-
-    th,
-    td {
-        padding: 11px 9px;
-        font-size: 12px;
-    }
-
-
-    /* -------------------------
-       CATÁLOGO
-    ------------------------- */
-
-    .catalog-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 10px;
-    }
-
-    .catalog-card {
-        min-height: 0;
-        border-radius: 11px;
-    }
-
-    .catalog-card-title {
-        font-size: 12px;
-    }
-
-    .catalog-card-meta {
-        font-size: 10px;
-    }
-
-    .catalog-card-overlay {
-        padding: 40px 9px 9px;
-    }
-
-
-    /* -------------------------
-       POSTERS
-    ------------------------- */
-
-    .poster-preview {
-        width: 70px;
-        height: 95px;
-    }
-
-    .poster-thumb {
-        width: 42px;
-        height: 58px;
-    }
-
-
-    /* -------------------------
-       USUARIOS
-    ------------------------- */
-
-    .user-row {
-        gap: 8px;
-    }
-
-    .user-avatar {
-        width: 34px;
-        height: 34px;
-        flex-shrink: 0;
-    }
-
-    .user-info strong {
-        font-size: 12px;
-    }
-
-    .user-info small {
-        font-size: 10px;
-    }
-
-
-    /* -------------------------
-       ACTIVIDAD
-    ------------------------- */
-
-    .activity-item {
-        gap: 9px;
-        padding: 11px 0;
-    }
-
-    .activity-icon {
-        width: 32px;
-        height: 32px;
-        flex-shrink: 0;
-    }
-
-    .activity-content strong {
-        font-size: 12px;
-    }
-
-    .activity-content small {
-        font-size: 10px;
-    }
-
-    .activity-time {
-        font-size: 9px;
-    }
-
-
-    /* -------------------------
-       MODALES
-    ------------------------- */
-
-    .modal {
-        padding: 10px;
-        align-items: flex-start;
-    }
-
-    .modal-box {
-        width: 100%;
-        max-width: 100%;
-        max-height: calc(100vh - 20px);
-
-        padding: 16px;
-
-        border-radius: 13px;
-    }
-
-    .modal-header {
-        gap: 10px;
-        margin-bottom: 15px;
-        padding-bottom: 12px;
-    }
-
-    .modal-header h2 {
-        font-size: 17px;
-    }
-
-    .modal-close {
-        width: 32px;
-        height: 32px;
-        flex-shrink: 0;
-    }
-
-    #episodesModal .modal-box {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    /* -------------------------
-       EPISODIOS
-    ------------------------- */
-
-    .episode-row {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 10px;
-        padding: 12px;
-    }
-
-    .season-card {
-        padding: 12px;
-    }
-
-    .season-header {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-
-    /* -------------------------
-       FEATURED
-    ------------------------- */
-
-    .featured-content {
-        min-height: 300px;
-    }
-
-    .featured-content-info {
-        max-width: 100%;
-        padding: 24px 18px;
-    }
-
-    .featured-content-title {
-        font-size: 23px;
-    }
-
-    .featured-content-description {
-        font-size: 12px;
-    }
-
-
-    /* -------------------------
-       TOAST
-    ------------------------- */
-
-    #toast {
-        left: 12px;
-        right: 12px;
-
-        bottom: 12px;
-
-        min-width: 0;
-        max-width: none;
-
-        font-size: 12px;
-    }
-
-
-    /* -------------------------
-       ALERTAS
-    ------------------------- */
-
-    .alert {
-        padding: 11px 12px;
-        font-size: 11px;
-    }
-
-
-    /* -------------------------
-       MÉTRICAS
-    ------------------------- */
-
-    .metric-row {
-        gap: 10px;
-    }
-
-    .metric-name,
-    .metric-value {
-        font-size: 11px;
-    }
-}
-
-
-/* =========================================================
-   MÓVILES PEQUEÑOS — 480px
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .brand-logo {
-        font-size: 18px;
-    }
-
-    .admin-badge {
-        display: none;
-    }
-
-    .logout-btn {
-        padding: 7px 9px;
-        font-size: 10px;
-    }
-
-    .content {
-        padding: 14px 9px;
-    }
-
-    .section-header h1 {
-        font-size: 21px;
-    }
-
-    .section-header p {
-        font-size: 11px;
-    }
-
-
-    /* Stats en una sola columna si
-       el teléfono es muy pequeño */
-
-    .stats {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-    }
-
-    .stat-card {
-        min-height: 110px;
-        padding: 12px;
-    }
-
-    .stat-value {
-        font-size: 23px;
-    }
-
-    .stat-icon {
-        width: 30px;
-        height: 30px;
-
-        top: 9px;
-        right: 9px;
-
-        font-size: 13px;
-    }
-
-
-    /* Catálogo */
-
-    .catalog-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-    }
-
-    .catalog-card-title {
-        font-size: 11px;
-    }
-
-    .catalog-card-meta {
-        font-size: 9px;
-    }
-
-
-    /* Panel */
-
-    .panel {
-        padding: 12px;
-    }
-
-
-    /* Botones */
-
-    .btn {
-        width: 100%;
-    }
-
-    .actions {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .actions .btn {
-        width: 100%;
-    }
-
-
-    /* Modal */
-
-    .modal-box {
-        padding: 13px;
-    }
-
-    .modal-header h2 {
-        font-size: 16px;
-    }
-
-
-    /* Login */
-
-    .login-box {
-        width: 100%;
-        padding: 25px 18px;
-    }
-
-    .login-box .logo {
-        font-size: 34px;
-    }
-
-    .login-box h1 {
-        font-size: 23px;
-    }
-}
-
-
-/* =========================================================
-   MÓVILES MUY PEQUEÑOS — 360px
-========================================================= */
-
-@media (max-width: 360px) {
-
-    .topbar {
-        padding: 0 8px;
-    }
-
-    .brand-logo {
-        font-size: 16px;
-    }
-
-    .logout-btn {
-        font-size: 9px;
-        padding: 6px 8px;
-    }
-
-    .content {
-        padding: 12px 7px;
-    }
-
-    .stats {
-        gap: 6px;
-    }
-
-    .stat-card {
-        min-height: 100px;
-        padding: 10px;
-    }
-
-    .stat-value {
-        font-size: 21px;
-    }
-
-    .stat-label {
-        font-size: 9px;
-    }
-
-    .catalog-grid {
-        gap: 6px;
-    }
-
-    .nav-btn {
-        padding: 8px 10px;
-        font-size: 11px;
-    }
-}
-
-
-/* =========================================================
-   TOUCH DEVICES
-   Quita efectos hover incómodos en celulares
-========================================================= */
-
-@media (hover: none) and (pointer: coarse) {
-
-    .btn:hover,
-    .stat-card:hover,
-    .catalog-card:hover,
-    .dashboard-card:hover,
-    .support-card:hover {
-        transform: none;
-    }
-
-    .nav-btn:hover {
-        transform: none;
-    }
-
-    .modal-close:hover {
-        transform: none;
-    }
-}
-
-
-
-
-/* =========================================================
-   RESPONSIVE — BOTONES DE ACCIONES / PAPELERAS
-========================================================= */
-
-@media (max-width: 750px) {
-
-    /* Todos los botones pequeños */
-    .btn-small {
-        min-height: 34px;
-        padding: 7px 9px;
-        font-size: 10px;
-        gap: 5px;
-        white-space: nowrap;
-    }
-
-    /* Botones normales */
-    .btn {
-        min-height: 38px;
-        padding: 9px 12px;
-        font-size: 12px;
-    }
-
-    /* Botones dentro de tablas */
-    .table-container .btn,
-    .table-container button {
-        min-height: 32px;
-        padding: 6px 9px;
-        font-size: 10px;
-        white-space: nowrap;
-    }
-
-    /* Contenedor de acciones de las tablas */
-    .table-container td:last-child {
-        white-space: nowrap;
-    }
-
-    .table-container td:last-child > *,
-    .table-container td:last-child button {
-        margin: 2px;
-    }
-
-    /* Grupos de botones */
-    .panel-header > div:last-child {
-        width: 100%;
-    }
-
-    .panel-header > div:last-child .btn {
-        flex: 1;
-    }
-
-    /* Papeleras: botones Actualizar / Vaciar */
-    .panel-header {
-        gap: 14px;
-    }
-
-    /* Mantener los botones alineados */
-    .panel-header > div[style*="display:flex"] {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        width: 100%;
-        gap: 7px !important;
-    }
-
-    .panel-header > div[style*="display:flex"] .btn {
-        flex: 1 1 auto;
-        min-width: 130px;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    /* Botones de acciones más pequeños */
-    .table-container .btn,
-    .table-container button {
-        min-height: 30px;
-        padding: 6px 8px;
-        font-size: 9px;
-        border-radius: 7px;
-    }
-
-    /* Si el botón solo tiene icono, no lo hacemos enorme */
-    .table-container button i:only-child {
-        margin: 0;
-    }
-
-    /* Botones de cabecera de Papeleras */
-    .panel-header > div[style*="display:flex"] {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .panel-header > div[style*="display:flex"] .btn {
-        width: 100%;
-        min-width: 0;
-    }
-
-    /* Acciones de actividad */
-    .section-header > div[style*="display:flex"] {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .section-header > div[style*="display:flex"] .btn {
-        width: 100%;
-    }
-}
-
-
-/* =========================================================
-   TOUCH — EVITAR EFECTOS RAROS EN CELULAR
-========================================================= */
-
-@media (hover: none) and (pointer: coarse) {
-
-    .btn:hover {
-        transform: none;
-    }
-
-    .btn:active {
-        transform: scale(.98);
-    }
-
-    .nav-btn:hover {
-        transform: none;
-    }
-
-    .logout-btn:hover {
-        transform: none;
-    }
-}
-
-
-
-
-/* =========================================================
-   CINEMAX ADMIN 2
-   CORRECCIÓN MÓVIL REAL
-   ========================================================= */
-
-@media (max-width: 750px) {
-
-    /* -----------------------------------------------------
-       EVITAR DESBORDAMIENTO HORIZONTAL
-    ----------------------------------------------------- */
+/* ============================================================
+   CINEMAX ADMIN 2 — RESPONSIVE FINAL
+   Corrección móvil global.
+
+   IMPORTANTE:
+   Este bloque va al FINAL para tener prioridad sobre las capas
+   visuales agregadas anteriormente.
+
+   No elimina ni cambia el estilo de escritorio.
+   Solo adapta el mismo diseño al ancho del teléfono.
+============================================================ */
+
+@media (max-width: 760px) {
+
+    /* --------------------------------------------------------
+       BASE — ELIMINAR DESBORDAMIENTO HORIZONTAL
+    -------------------------------------------------------- */
 
     html,
     body {
         width: 100%;
+        min-width: 0 !important;
         max-width: 100%;
         overflow-x: hidden !important;
     }
 
-    * {
+    body {
+        position: relative;
+    }
+
+    #adminApp {
+        width: 100%;
         max-width: 100%;
-    }
-
-    /* -----------------------------------------------------
-       LAYOUT PRINCIPAL
-    ----------------------------------------------------- */
-
-    .layout {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
         min-width: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        overflow-x: hidden;
     }
 
-    /* -----------------------------------------------------
+    /* --------------------------------------------------------
        SIDEBAR
-    ----------------------------------------------------- */
+       Se conserva como menú lateral desplegable.
+    -------------------------------------------------------- */
 
     .sidebar {
-        position: relative !important;
+        position: fixed !important;
         top: 0 !important;
         left: 0 !important;
+        bottom: 0 !important;
 
-        width: 100% !important;
-        max-width: 100% !important;
+        width: min(285px, 86vw) !important;
+        max-width: 285px !important;
         min-width: 0 !important;
 
-        height: auto !important;
-        min-height: 0 !important;
+        height: 100vh !important;
 
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
+        transform: translateX(-105%) !important;
+        transition: transform .3s cubic-bezier(.4,0,.2,1);
+
+        z-index: 1000 !important;
+
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
 
         box-sizing: border-box !important;
     }
 
-    /* -----------------------------------------------------
-       CONTENIDO
-    ----------------------------------------------------- */
+    .sidebar.mobile-open {
+        transform: translateX(0) !important;
+    }
+
+    .sidebar-brand {
+        flex-shrink: 0;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+        min-width: 0 !important;
+    }
+
+    .nav-btn {
+        max-width: 100%;
+        min-width: 0 !important;
+    }
+
+    /* --------------------------------------------------------
+       APP SHELL
+       ESTA ES LA CORRECCIÓN PRINCIPAL DEL PROBLEMA.
+
+       El CSS anterior vuelve a poner:
+       margin-left: var(--sidebar-width)
+
+       después de los @media móviles.
+       Aquí lo anulamos definitivamente.
+    -------------------------------------------------------- */
+
+    .app-shell {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        overflow-x: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* --------------------------------------------------------
+       TOPBAR
+    -------------------------------------------------------- */
+
+    .topbar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        min-height: 68px !important;
+        height: auto;
+
+        padding: 0 12px !important;
+
+        gap: 8px;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden;
+    }
+
+    .topbar-left {
+        min-width: 0 !important;
+        flex: 1 1 auto;
+
+        gap: 9px !important;
+    }
+
+    .mobile-menu {
+        flex: 0 0 38px;
+    }
+
+    .topbar-title {
+        min-width: 0 !important;
+        max-width: 100%;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .top-actions {
+        flex: 0 0 auto;
+        min-width: 0 !important;
+
+        gap: 4px !important;
+    }
+
+    .top-btn,
+    .logout-btn {
+        flex: 0 0 36px;
+
+        width: 36px !important;
+        min-width: 36px !important;
+        height: 36px;
+
+        padding: 0 !important;
+    }
+
+    .top-user {
+        flex: 0 0 auto;
+        min-width: 36px !important;
+
+        margin-left: 0 !important;
+        padding: 3px !important;
+    }
+
+    .top-user-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .top-user-info,
+    .user-chevron,
+    .top-btn-text,
+    .logout-text {
+        display: none !important;
+    }
+
+    /* --------------------------------------------------------
+       CONTENT
+    -------------------------------------------------------- */
 
     .content {
         width: 100% !important;
@@ -6829,291 +6003,776 @@ th {
 
         margin: 0 !important;
 
-        padding: 18px !important;
+        padding: 22px 14px 45px !important;
 
         box-sizing: border-box !important;
+
         overflow-x: hidden !important;
     }
 
-    /* -----------------------------------------------------
-       TOPBAR
-    ----------------------------------------------------- */
-
-    .topbar {
+    .admin-section {
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+    /* --------------------------------------------------------
+       ENCABEZADOS
+    -------------------------------------------------------- */
+
+    .section-header,
+    .hero-header {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
 
         box-sizing: border-box !important;
 
-        overflow: hidden !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+
+        gap: 16px !important;
     }
 
-    /* -----------------------------------------------------
-       PANELES
-    ----------------------------------------------------- */
-
-    .panel,
-    .welcome-panel,
-    .section,
-    .card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-    }
-
-    /* -----------------------------------------------------
-       HEADERS
-    ----------------------------------------------------- */
-
-    .panel-header,
     .section-header {
-        width: 100%;
-        max-width: 100%;
-
-        box-sizing: border-box;
-
-        flex-wrap: wrap;
+        padding: 0 !important;
+        margin-bottom: 22px !important;
     }
 
-    /* -----------------------------------------------------
-       STATS
-    ----------------------------------------------------- */
+    .hero-header {
+        min-height: 0 !important;
 
-    .stats {
+        padding: 23px !important;
+        margin-bottom: 22px !important;
+
+        border-radius: var(--radius-lg);
+    }
+
+    .section-header h1,
+    .hero-header h1 {
+        max-width: 100%;
+
+        font-size: clamp(27px, 8vw, 38px) !important;
+        line-height: 1.05;
+
+        overflow-wrap: anywhere;
+    }
+
+    .section-header p,
+    .hero-header p {
+        max-width: 100% !important;
+
+        font-size: 12px !important;
+        line-height: 1.65;
+
+        overflow-wrap: anywhere;
+    }
+
+    .hero-header .btn,
+    .section-header .btn {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* --------------------------------------------------------
+       ESTADÍSTICAS
+       Conserva las tarjetas y colores originales.
+    -------------------------------------------------------- */
+
+    .stats-grid {
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important;
 
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
-        gap: 12px !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
     }
 
     .stat-card {
+        width: 100% !important;
         min-width: 0 !important;
-        width: 100% !important;
-
-        box-sizing: border-box !important;
-    }
-
-    /* -----------------------------------------------------
-       DASHBOARD
-    ----------------------------------------------------- */
-
-    .dashboard-grid,
-    .analytics-grid,
-    .settings-grid,
-    .support-grid {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-
-        box-sizing: border-box !important;
-    }
-
-    /* -----------------------------------------------------
-       FORMULARIOS
-    ----------------------------------------------------- */
-
-    .form-grid {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        grid-template-columns: 1fr !important;
-
-        min-width: 0 !important;
-    }
-
-    .form-group,
-    .form-control,
-    input,
-    select,
-    textarea {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* -----------------------------------------------------
-       TABLAS
-    ----------------------------------------------------- */
-
-    .table-container {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow-x: auto !important;
-
-        box-sizing: border-box !important;
-    }
-
-    table {
-        min-width: 650px;
-    }
-
-    /* -----------------------------------------------------
-       BOTONES
-    ----------------------------------------------------- */
-
-    .btn {
-        box-sizing: border-box !important;
-        max-width: 100%;
-    }
-
-    .btn-small {
-        min-height: 34px;
-        padding: 7px 9px;
-        font-size: 10px;
-        white-space: nowrap;
-    }
-
-    /* -----------------------------------------------------
-       BOTONES DE ACCIONES
-    ----------------------------------------------------- */
-
-    .table-container td:last-child {
-        white-space: nowrap;
-    }
-
-    .table-container .btn,
-    .table-container button {
-        max-width: none !important;
-
-        min-height: 32px;
-
-        padding: 6px 9px;
-
-        font-size: 10px;
-
-        white-space: nowrap;
-    }
-
-    /* -----------------------------------------------------
-       MODALES
-    ----------------------------------------------------- */
-
-    .modal {
-        width: 100% !important;
-        max-width: 100% !important;
+        min-height: 128px !important;
 
         padding: 15px !important;
 
         box-sizing: border-box !important;
     }
 
-    .modal-box {
+    .stat-content {
+        min-width: 0;
+    }
+
+    .stat-content strong {
+        font-size: 25px !important;
+    }
+
+    .stat-content span,
+    .stat-content small {
+        overflow-wrap: anywhere;
+    }
+
+    /* --------------------------------------------------------
+       GRIDS PRINCIPALES
+    -------------------------------------------------------- */
+
+    .dashboard-grid,
+    .settings-grid {
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 14px !important;
+    }
+
+    .dashboard-grid > *,
+    .settings-grid > * {
+        width: 100%;
+        min-width: 0 !important;
+    }
+
+    /* --------------------------------------------------------
+       PANELES
+    -------------------------------------------------------- */
+
+    .panel {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
 
         box-sizing: border-box !important;
 
-        margin: 0 auto !important;
+        border-radius: 18px;
     }
 
-    /* -----------------------------------------------------
-       CATALOG GRID
-    ----------------------------------------------------- */
-
-    .catalog-grid {
+    .panel-header {
         width: 100% !important;
-        max-width: 100% !important;
+        min-width: 0 !important;
 
-        grid-template-columns: repeat(
-            2,
-            minmax(0, 1fr)
-        ) !important;
-    }
+        min-height: 78px;
 
-    /* -----------------------------------------------------
-       ELEMENTOS FLEXIBLES
-    ----------------------------------------------------- */
-
-    .toolbar {
-        width: 100% !important;
-        max-width: 100% !important;
+        padding: 18px !important;
 
         flex-wrap: wrap !important;
 
         box-sizing: border-box !important;
     }
 
-    /* -----------------------------------------------------
-       IMÁGENES
-    ----------------------------------------------------- */
-
-    img {
-        max-width: 100%;
-        height: auto;
+    .panel-header > * {
+        min-width: 0;
     }
 
-    /* -----------------------------------------------------
-       TEXTO
-    ----------------------------------------------------- */
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-        max-width: 100%;
-        overflow-wrap: break-word;
+    .panel-header h2 {
+        font-size: 17px;
     }
-}
 
+    .panel-header p {
+        overflow-wrap: anywhere;
+    }
 
-/* =========================================================
-   CELULARES PEQUEÑOS
-   ========================================================= */
+    /* --------------------------------------------------------
+       QUICK ACTIONS
+    -------------------------------------------------------- */
 
-@media (max-width: 480px) {
+    .quick-actions {
+        width: 100%;
+        max-width: 100%;
 
-    .content {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 9px !important;
+        padding: 13px !important;
+
+        box-sizing: border-box;
+    }
+
+    .quick-action {
+        width: 100%;
+        min-width: 0 !important;
+        min-height: 125px !important;
+
         padding: 14px !important;
     }
 
-    .stats {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 10px !important;
+    .quick-action strong,
+    .quick-action small {
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
+
+    /* --------------------------------------------------------
+       TOOLBAR / BUSCADOR
+    -------------------------------------------------------- */
+
+    .toolbar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        gap: 10px !important;
+
+        padding: 15px !important;
+
+        box-sizing: border-box;
+    }
+
+    .search-wrap {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+    }
+
+    .search-wrap input,
+    .toolbar select {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .toolbar select {
+        width: 100% !important;
+    }
+
+    /* --------------------------------------------------------
+       CATÁLOGO
+    -------------------------------------------------------- */
 
     .catalog-grid {
-        grid-template-columns: 1fr 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
         gap: 10px !important;
+        padding: 13px !important;
+
+        box-sizing: border-box;
     }
 
-    .panel,
-    .welcome-panel,
-    .section {
-        padding: 15px !important;
+    .catalog-grid > * {
+        min-width: 0 !important;
+        max-width: 100% !important;
     }
+
+    /* --------------------------------------------------------
+       FORMULARIOS
+    -------------------------------------------------------- */
+
+    #contentForm {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 17px !important;
+
+        box-sizing: border-box;
+    }
+
+    #contentForm .settings-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    #contentForm input,
+    #contentForm select,
+    #contentForm textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box;
+    }
+
+    /* --------------------------------------------------------
+       SETTINGS
+    -------------------------------------------------------- */
+
+    .settings-hero {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 19px !important;
+
+        align-items: flex-start !important;
+
+        box-sizing: border-box;
+    }
+
+    .setting-card {
+        width: 100%;
+        min-width: 0 !important;
+
+        padding: 14px !important;
+    }
+
+    .setting-card > div:nth-child(2) {
+        min-width: 0;
+    }
+
+    .setting-card p,
+    .setting-card strong {
+        overflow-wrap: anywhere;
+    }
+
+    /* --------------------------------------------------------
+       TABLAS
+
+       NO comprimimos las tablas hasta volverlas ilegibles.
+       Se mantiene el diseño de PC y se permite desplazamiento
+       SOLO dentro de la tabla.
+    -------------------------------------------------------- */
+
+    .table-container {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        -webkit-overflow-scrolling: touch;
+
+        box-sizing: border-box !important;
+    }
+
+    .table-container table {
+        width: max-content;
+        min-width: 650px;
+    }
+
+    /* --------------------------------------------------------
+       ANALYTICS
+    -------------------------------------------------------- */
+
+    #admin2AnalyticsDetails {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        gap: 18px !important;
+    }
+
+    #admin2AnalyticsDetails > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+    #admin2AnalyticsDetails .table-container,
+    #admin2AnalyticsDetails .analytics-table,
+    #admin2AnalyticsDetails > div:has(table) {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: auto !important;
+
+        box-sizing: border-box;
+    }
+
+    #admin2AnalyticsDetails table {
+        min-width: 760px !important;
+    }
+
+    /* --------------------------------------------------------
+       BOTONES DE ACCIONES / PAPELERA
+    -------------------------------------------------------- */
 
     .btn {
-        min-height: 38px;
+        min-height: 40px;
+        box-sizing: border-box;
+    }
+
+    .btn-small {
+        min-height: 34px;
+
+        padding: 7px 10px !important;
+
+        font-size: 10px !important;
+
+        white-space: nowrap;
     }
 
     .table-container .btn,
     .table-container button {
-        min-height: 30px;
-        padding: 6px 8px;
+        min-width: 0;
+
+        min-height: 34px;
+
+        padding: 7px 9px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start !important;
+
+        gap: 7px;
+
+        flex-wrap: wrap;
+    }
+
+    /* --------------------------------------------------------
+       PAPELERA — CABECERAS Y BOTONES
+    -------------------------------------------------------- */
+
+    #trashContent,
+    #analyticsTrashContent,
+    #favoritesTrashContent {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+    #trash .panel-header {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 18px !important;
+
+        gap: 12px;
+    }
+
+    #trash .panel-header > div {
+        min-width: 0;
+    }
+
+    #trash .panel-header .btn {
+        min-height: 36px;
+    }
+
+    #trash #trashTable,
+    #trash #favoritesTrashTable,
+    #trash #analyticsTrashTable {
+        min-width: 680px !important;
+    }
+
+    #trash #trashTable .actions,
+    #trash #favoritesTrashTable .actions,
+    #trash #analyticsTrashTable .actions {
+        justify-content: flex-start !important;
+    }
+
+    #trash #trashTable .btn,
+    #trash #favoritesTrashTable .btn,
+    #trash #analyticsTrashTable .btn {
+        min-width: 0 !important;
+
+        min-height: 34px;
+
+        padding: 7px 10px !important;
+
+        font-size: 9px;
+    }
+
+    /* --------------------------------------------------------
+       MODALES
+    -------------------------------------------------------- */
+
+    .modal {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 10px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .modal-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        max-height: 94vh !important;
+
+        border-radius: 17px;
+    }
+
+    .modal-header {
+        padding: 17px !important;
+
+        gap: 10px;
+    }
+
+    .modal-header h2 {
+        font-size: 18px;
+        overflow-wrap: anywhere;
+    }
+
+    .modal-close {
+        flex: 0 0 36px;
+    }
+
+    /* --------------------------------------------------------
+       TOAST
+    -------------------------------------------------------- */
+
+    #toast {
+        left: 12px;
+        right: 12px;
+        bottom: 14px;
+
+        width: auto;
+        max-width: none;
+    }
+
+    /* --------------------------------------------------------
+       IMÁGENES / MEDIA
+    -------------------------------------------------------- */
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+    }
+
+    /* --------------------------------------------------------
+       FLEX Y GRID — PROTECCIÓN CONTRA OVERFLOW
+    -------------------------------------------------------- */
+
+    .topbar,
+    .topbar-left,
+    .top-actions,
+    .section-header,
+    .hero-header,
+    .panel-header,
+    .toolbar,
+    .settings-hero,
+    .actions {
+        min-width: 0 !important;
+    }
+
+    /* --------------------------------------------------------
+       EFECTOS TÁCTILES
+    -------------------------------------------------------- */
+
+    @media (hover: none) and (pointer: coarse) {
+
+        .btn:hover,
+        .nav-btn:hover,
+        .top-btn:hover,
+        .logout-btn:hover,
+        .quick-action:hover,
+        .stat-card:hover,
+        .setting-card:hover {
+            transform: none;
+        }
+
+        .btn:active {
+            transform: scale(.98);
+        }
+    }
+}
+
+
+/* ============================================================
+   TELÉFONOS PEQUEÑOS
+============================================================ */
+
+@media (max-width: 450px) {
+
+    .content {
+        padding: 18px 11px 38px !important;
+    }
+
+    .topbar {
+        padding: 0 9px !important;
+    }
+
+    .topbar-title {
+        font-size: 13px !important;
+    }
+
+    .topbar-kicker {
+        font-size: 6px !important;
+    }
+
+    .mobile-menu {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+    }
+
+    .top-btn,
+    .logout-btn {
+        width: 34px !important;
+        min-width: 34px !important;
+        flex-basis: 34px;
+        height: 34px;
+    }
+
+    .top-user-avatar {
+        width: 28px;
+        height: 28px;
+    }
+
+    .hero-header {
+        padding: 19px !important;
+    }
+
+    .section-header h1,
+    .hero-header h1 {
+        font-size: 28px !important;
+    }
+
+    .stats-grid {
+        gap: 8px !important;
+    }
+
+    .stat-card {
+        min-height: 120px !important;
+        padding: 13px !important;
+    }
+
+    .stat-icon {
+        width: 36px !important;
+        height: 36px !important;
+
+        margin-bottom: 11px !important;
+    }
+
+    .stat-content strong {
+        font-size: 23px !important;
+    }
+
+    .stat-content span {
+        font-size: 7px !important;
+    }
+
+    .stat-content small {
+        font-size: 8px !important;
+    }
+
+    .quick-actions {
+        gap: 8px !important;
+        padding: 10px !important;
+    }
+
+    .quick-action {
+        min-height: 118px !important;
+        padding: 12px !important;
+    }
+
+    .catalog-grid {
+        gap: 8px !important;
+        padding: 10px !important;
+    }
+
+    .panel-header {
+        padding: 16px !important;
+    }
+
+    #contentForm {
+        padding: 14px !important;
+    }
+
+    .table-container table {
+        min-width: 620px;
+    }
+
+    #admin2AnalyticsDetails table {
+        min-width: 700px !important;
+    }
+
+    #trash #trashTable,
+    #trash #favoritesTrashTable,
+    #trash #analyticsTrashTable {
+        min-width: 620px !important;
+    }
+
+    #trash #trashTable .btn,
+    #trash #favoritesTrashTable .btn,
+    #trash #analyticsTrashTable .btn {
+        min-height: 32px;
+
+        padding: 6px 8px !important;
+
         font-size: 9px;
     }
 }
 
 
-/* =========================================================
-   SEGURIDAD EXTRA CONTRA OVERFLOW
-   ========================================================= */
+/* ============================================================
+   TELÉFONOS MUY ESTRECHOS
+============================================================ */
 
-@media (max-width: 750px) {
+@media (max-width: 360px) {
 
-    .layout,
-    .content,
-    .sidebar,
-    .topbar,
-    main,
-    section,
-    article,
-    div {
-        min-width: 0;
+    .content {
+        padding-left: 9px !important;
+        padding-right: 9px !important;
     }
 
+    .stats-grid {
+        gap: 7px !important;
+    }
+
+    .stat-card {
+        padding: 11px !important;
+    }
+
+    .catalog-grid {
+        gap: 7px !important;
+        padding: 8px !important;
+    }
+
+    .top-actions {
+        gap: 2px !important;
+    }
+
+    .top-user {
+        display: none !important;
+    }
+}
+
+
+/* ============================================================
+   SEGURIDAD FINAL — NUNCA DESPLAZAR TODA LA PÁGINA
+============================================================ */
+
+@media (max-width: 760px) {
+
+    .app-shell {
+        position: relative !important;
+        left: 0 !important;
+        right: auto !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .content {
+        position: relative !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .topbar {
+        position: sticky !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
 }
