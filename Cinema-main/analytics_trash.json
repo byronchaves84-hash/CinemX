@@ -328,27 +328,5 @@
         "viewed_at": "2026-09-18T02:12:29.611250+00:00",
         "deleted_at": "2026-09-18T03:34:20.023783+00:00",
         "deleted_at_epoch": 1789702460.0237978
-    },
-    {
-        "id": "ea89f72b-d8f6-442c-ae79-632314b6068f",
-        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
-        "content_id": "la-última-señal",
-        "title": "La Última Señal",
-        "type": "pelicula",
-        "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728",
-        "url": "",
-        "video": "https://cdn.truefilesize.com/mp4/sample-10mb.mp4",
-        "year": "2026",
-        "genre": "Ciencia ficción, misterio, suspenso",
-        "duration": "10 segundos",
-        "rating": "8.4",
-        "season": "",
-        "episode": "",
-        "session_id": "ThxBZYgrDGq0SYY19mHfF_B_-_gmUDZY6JMnAQ-bu2M",
-        "timestamp": "2026-09-18T02:12:17.736537+00:00",
-        "timestamp_epoch": 1789697537.7365482,
-        "viewed_at": "2026-09-18T02:12:17.736548+00:00",
-        "deleted_at": "2026-09-18T03:34:21.955862+00:00",
-        "deleted_at_epoch": 1789702461.9558764
     }
 ]
