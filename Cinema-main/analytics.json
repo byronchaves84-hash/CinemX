@@ -180,26 +180,6 @@
         "viewed_at": "2026-09-18T02:18:08.547649+00:00"
     },
     {
-        "id": "9f4055ac-8dbd-4754-89ad-02d335ffc557",
-        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
-        "content_id": "terror-2",
-        "title": "El Conjuro",
-        "type": "Terror",
-        "image": "../Cinema-main/images/terror2.jpg",
-        "url": "../Cinema-main/terror2/enlace1.html",
-        "video": "../Cinema-main/terror2/enlace1.html",
-        "year": "",
-        "genre": "Terror",
-        "duration": "",
-        "rating": "",
-        "season": "",
-        "episode": "",
-        "session_id": "VcUjMahIH0n6Zl_krxg4K8N5WnKlfu9GszJ_szCyh0c",
-        "timestamp": "2026-09-18T02:18:10.447294+00:00",
-        "timestamp_epoch": 1789697890.4473014,
-        "viewed_at": "2026-09-18T02:18:10.447301+00:00"
-    },
-    {
         "id": "816e635f-582b-4a34-9ee4-0c402ee1f957",
         "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
         "content_id": "la-última-señal",
