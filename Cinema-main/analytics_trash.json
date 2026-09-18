@@ -196,5 +196,27 @@
         "viewed_at": "2026-09-18T02:18:08.547649+00:00",
         "deleted_at": "2026-09-18T03:33:51.087139+00:00",
         "deleted_at_epoch": 1789702431.087155
+    },
+    {
+        "id": "eb13b149-5b81-4de1-9d0f-0e06669b05ea",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "terror-2",
+        "title": "El Conjuro",
+        "type": "Terror",
+        "image": "../Cinema-main/images/terror2.jpg",
+        "url": "../Cinema-main/terror2/enlace1.html",
+        "video": "../Cinema-main/terror2/enlace1.html",
+        "year": "",
+        "genre": "Terror",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "VcUjMahIH0n6Zl_krxg4K8N5WnKlfu9GszJ_szCyh0c",
+        "timestamp": "2026-09-18T02:18:02.372850+00:00",
+        "timestamp_epoch": 1789697882.372858,
+        "viewed_at": "2026-09-18T02:18:02.372858+00:00",
+        "deleted_at": "2026-09-18T03:34:02.676779+00:00",
+        "deleted_at_epoch": 1789702442.676791
     }
 ]
