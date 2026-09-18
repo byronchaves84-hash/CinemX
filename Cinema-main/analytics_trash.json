@@ -284,5 +284,27 @@
         "viewed_at": "2026-09-18T02:15:30.326836+00:00",
         "deleted_at": "2026-09-18T03:34:11.560690+00:00",
         "deleted_at_epoch": 1789702451.5607033
+    },
+    {
+        "id": "bf72f8fc-4d7c-4159-aec7-858325a8cb0f",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "serie-1",
+        "title": "The Walking Dead",
+        "type": "Serie",
+        "image": "../Cinema-main/images/serie1.jpg",
+        "url": "../Cinema-main/Serie1/index.html",
+        "video": "https://drive.google.com/file/d/10iwokJQTSfM4sMKeqRSfBfL3UiuZ5xJe/preview",
+        "year": "",
+        "genre": "Serie",
+        "duration": "",
+        "rating": "",
+        "season": 1,
+        "episode": 1,
+        "session_id": "ThxBZYgrDGq0SYY19mHfF_B_-_gmUDZY6JMnAQ-bu2M",
+        "timestamp": "2026-09-18T02:12:32.137056+00:00",
+        "timestamp_epoch": 1789697552.1370661,
+        "viewed_at": "2026-09-18T02:12:32.137066+00:00",
+        "deleted_at": "2026-09-18T03:34:18.193589+00:00",
+        "deleted_at_epoch": 1789702458.1935992
     }
 ]
