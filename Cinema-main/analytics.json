@@ -218,5 +218,25 @@
         "timestamp": "2026-09-18T02:18:02.372850+00:00",
         "timestamp_epoch": 1789697882.372858,
         "viewed_at": "2026-09-18T02:18:02.372858+00:00"
+    },
+    {
+        "id": "63c2a7c3-0961-4545-94fe-1f1da985af19",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "pelicula-6",
+        "title": "Película 6",
+        "type": "Película",
+        "image": "images/anime6.jpg",
+        "url": "enlace6/enlace1.html",
+        "video": "enlace6/enlace1.html",
+        "year": "2026",
+        "genre": "Terror",
+        "duration": "1h 45m",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "VcUjMahIH0n6Zl_krxg4K8N5WnKlfu9GszJ_szCyh0c",
+        "timestamp": "2026-09-18T02:18:08.547638+00:00",
+        "timestamp_epoch": 1789697888.547649,
+        "viewed_at": "2026-09-18T02:18:08.547649+00:00"
     }
 ]
