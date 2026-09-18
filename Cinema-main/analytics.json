@@ -98,5 +98,25 @@
         "timestamp": "2026-09-18T02:12:17.736537+00:00",
         "timestamp_epoch": 1789697537.7365482,
         "viewed_at": "2026-09-18T02:12:17.736548+00:00"
+    },
+    {
+        "id": "5a38fc6e-0860-4ded-b1ce-97de6cb67d59",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "serie-1",
+        "title": "The Walking Dead",
+        "type": "serie",
+        "image": "https://cinemx.onrender.com/Cinema-main/images/serie1.jpg",
+        "url": "../Cinema-main/Serie1/index.html",
+        "video": "../Cinema-main/Serie1/index.html",
+        "year": "",
+        "genre": "Serie",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "ThxBZYgrDGq0SYY19mHfF_B_-_gmUDZY6JMnAQ-bu2M",
+        "timestamp": "2026-09-18T02:12:29.611239+00:00",
+        "timestamp_epoch": 1789697549.6112497,
+        "viewed_at": "2026-09-18T02:12:29.611250+00:00"
     }
 ]
