@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -9,20 +8,17 @@
 <meta
 name="viewport"
 content="width=device-width, initial-scale=1.0"
-
 >
 
 <meta
 name="theme-color"
 content="#050505"
-
 >
 
 <meta
 name="description"
 id="metaDescription"
 content="Serie | CINEMAX"
-
 >
 
 <title id="pageTitle">
@@ -34,15 +30,211 @@ content="Serie | CINEMAX"
     href="planseries.css"
 >
 
+<style>
+
+/* =========================================================
+   REPRODUCTOR CINEMAX
+   MISMA ESTRUCTURA VISUAL QUE PLANTILLA
+========================================================= */
+
+.video-container {
+
+    position: relative !important;
+
+    width: 100% !important;
+
+    max-width: 1050px;
+
+    aspect-ratio: 16 / 9 !important;
+
+    height: auto !important;
+
+    overflow: hidden !important;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    background: #000;
+}
+
+
+/* =========================================================
+   CUANDO EL EPISODIO ESTA REPRODUCIENDOSE
+========================================================= */
+
+.video-container.is-playing,
+.video-container.movie-playing {
+
+    aspect-ratio: 16 / 9 !important;
+
+}
+
+
+/* =========================================================
+   IFRAME DEL REPRODUCTOR
+========================================================= */
+
+.video-container iframe {
+
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    display: block !important;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    min-width: 100% !important;
+
+    min-height: 100% !important;
+
+    max-width: none !important;
+
+    max-height: none !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    transform: none !important;
+
+    z-index: 2 !important;
+
+    background: #000;
+
+}
+
+
+/* =========================================================
+   CONTROLES CENTRADOS
+========================================================= */
+
+.controls-container {
+
+    width: 100% !important;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    flex-wrap: wrap !important;
+
+    gap: 10px !important;
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+}
+
+
+/* =========================================================
+   BOTONES CENTRADOS
+========================================================= */
+
+.controls-container .episode-button {
+
+    flex: 0 0 auto !important;
+
+}
+
+
+/* =========================================================
+   EL IFRAME NO DEBE GIRARSE EN MOVIL
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .video-container {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        aspect-ratio: 16 / 9 !important;
+
+        height: auto !important;
+
+    }
+
+    .video-container iframe {
+
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        transform: none !important;
+
+    }
+
+    .controls-container {
+
+        width: 100% !important;
+
+        justify-content: center !important;
+
+        align-items: center !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   PANTALLAS MUY PEQUEÑAS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .video-container {
+
+        width: 100% !important;
+
+        aspect-ratio: 16 / 9 !important;
+
+    }
+
+    .controls-container {
+
+        justify-content: center !important;
+
+    }
+
+    .controls-container .episode-button {
+
+        flex: 0 0 auto !important;
+
+    }
+
+}
+
+</style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
      FONDO / TRAILER
 ========================================================= -->
 
-<div class="video-trailer" id="trailerContainer">
+<div
+class="video-trailer"
+id="trailerContainer"
+>
 
 <video
 id="trailer"
@@ -51,8 +243,7 @@ loop
 muted
 playsinline
 preload="auto"
-
-> </video>
+></video>
 
 <div class="trailer-overlay"></div>
 
@@ -60,13 +251,14 @@ preload="auto"
 
 </div>
 
+
 <!-- =========================================================
      FONDO DEL VIDEO DEL EPISODIO
 ========================================================= -->
 
 <div
-    class="video-background"
-    id="videoBackground"
+class="video-background"
+id="videoBackground"
 >
 
 <video
@@ -74,18 +266,19 @@ id="backgroundVideo"
 muted
 playsinline
 preload="metadata"
-
-> </video>
+></video>
 
 <div class="background-overlay"></div>
 
 </div>
+
 
 <!-- =========================================================
      CONTENEDOR PRINCIPAL
 ========================================================= -->
 
 <main class="serie-container">
+
 
 <!-- =====================================================
      HERO
@@ -97,7 +290,6 @@ preload="metadata"
 
 <div class="hero-content">
 
-<!-- MARCA -->
 
 <div class="serie-brand">
 
@@ -111,7 +303,6 @@ CINEMAX
 
 </div>
 
-<!-- SERIE ORIGINAL -->
 
 <div class="original-label">
 
@@ -123,11 +314,10 @@ SERIE ORIGINAL
 
 </div>
 
-<!-- TITULO -->
 
 <h1
-    class="serie-title"
-    id="serieTitle"
+class="serie-title"
+id="serieTitle"
 >
 
 <span>
@@ -136,11 +326,10 @@ CARGANDO
 
 </h1>
 
-<!-- META -->
 
 <div
-    class="serie-meta"
-    id="serieMeta"
+class="serie-meta"
+id="serieMeta"
 >
 
 <span class="quality">
@@ -149,7 +338,6 @@ HD
 
 </div>
 
-<!-- DESCRIPCION -->
 
 <div class="serie-description">
 
@@ -159,7 +347,6 @@ Cargando información de la serie...
 
 </div>
 
-<!-- ACCIONES -->
 
 <div class="hero-actions">
 
@@ -168,7 +355,6 @@ id="heroStartButton"
 class="hero-play-button"
 onclick="startEpisode()"
 type="button"
-
 >
 
 <span class="play-symbol">
@@ -181,11 +367,11 @@ Iniciar
 
 </button>
 
+
 <a
 href="#"
 id="heroInfoButton"
 class="hero-info-button"
-
 >
 
 <span class="info-symbol">
@@ -200,74 +386,28 @@ Más información
 
 </div>
 
-<!-- REACCIONES -->
 
-<div class="reaction-area">
 
-<span class="reaction-question">
-¿Qué te parece?
-</span>
-
-<div class="like-dislike-buttons">
-
-<button
-id="likeButton"
-class="reaction-button"
-type="button"
-onclick="setReaction('like')"
-
->
-
-<span>
-👍
-</span>
-
-<span>
-Me gusta
-</span>
-
-</button>
-
-<button
-id="dislikeButton"
-class="reaction-button"
-type="button"
-onclick="setReaction('dislike')"
-
->
-
-<span>
-👎
-</span>
-
-<span>
-No me gusta
-</span>
-
-</button>
 
 </div>
 
-</div>
 
 </div>
-
-<!-- FADE -->
 
 <div class="hero-bottom-fade"></div>
 
 </section>
+
 
 <!-- =====================================================
      SECCION DE EPISODIOS
 ====================================================== -->
 
 <section
-    class="episode-section"
-    id="episodeSection"
+class="episode-section"
+id="episodeSection"
 >
 
-<!-- CABECERA -->
 
 <div class="section-heading">
 
@@ -276,10 +416,10 @@ No me gusta
 <span
 class="section-kicker"
 id="sectionKicker"
-
 >
+SERIE
+</span>
 
-SERIE </span>
 
 <div class="section-title-row">
 
@@ -293,20 +433,23 @@ Reproducción
 
 </div>
 
+
 <div
-    class="current-episode-badge"
-    id="currentEpisodeBadge"
+class="current-episode-badge"
+id="currentEpisodeBadge"
 >
 T1 · E1
 </div>
 
 </div>
 
+
 <!-- =================================================
      EXPLORADOR
 ================================================== -->
 
 <div class="episode-explorer">
+
 
 <div class="explorer-header">
 
@@ -322,24 +465,24 @@ Elige tu episodio
 
 </div>
 
+
 <button
 class="explorer-toggle"
 id="explorerToggle"
 type="button"
 aria-label="Mostrar opciones"
-
 >
-
-▾ </button>
+▾
+</button>
 
 </div>
 
-<!-- SELECTORES -->
 
 <div
-    class="episode-selectors"
-    id="episodeSelectors"
+class="episode-selectors"
+id="episodeSelectors"
 >
+
 
 <div class="selector-box">
 
@@ -352,8 +495,8 @@ TEMPORADA
 <select
 id="seasonSelect"
 onchange="changeSeason()"
-
-> </select>
+>
+</select>
 
 <span class="select-arrow">
 ▾
@@ -362,6 +505,7 @@ onchange="changeSeason()"
 </div>
 
 </div>
+
 
 <div class="selector-box">
 
@@ -374,8 +518,8 @@ EPISODIO
 <select
 id="episodeSelect"
 onchange="changeEpisode()"
-
-> </select>
+>
+</select>
 
 <span class="select-arrow">
 ▾
@@ -385,25 +529,27 @@ onchange="changeEpisode()"
 
 </div>
 
+
 </div>
 
 </div>
+
 
 <!-- =================================================
      CONTROLES
 ================================================== -->
 
 <div
-    id="controlsContainer"
-    class="controls-container"
+id="controlsContainer"
+class="controls-container"
 >
+
 
 <button
 class="episode-button secondary"
 onclick="previousEpisode()"
 type="button"
 aria-label="Episodio anterior"
-
 >
 
 <span class="button-icon">
@@ -416,12 +562,12 @@ Anterior
 
 </button>
 
+
 <button
 id="startButton"
 class="episode-button primary"
 onclick="startEpisode()"
 type="button"
-
 >
 
 <span class="button-icon">
@@ -434,12 +580,12 @@ Iniciar T1-E1
 
 </button>
 
+
 <button
 class="episode-button secondary"
 onclick="nextEpisode()"
 type="button"
 aria-label="Siguiente episodio"
-
 >
 
 <span>
@@ -452,7 +598,9 @@ Siguiente
 
 </button>
 
+
 </div>
+
 
 <!-- =================================================
      REPRODUCTOR
@@ -461,13 +609,14 @@ Siguiente
 <div class="player-section">
 
 <div
-    id="videoContainer"
-    class="video-container"
+id="videoContainer"
+class="video-container"
 >
 
+
 <div
-    class="player-placeholder"
-    id="playerPlaceholder"
+class="player-placeholder"
+id="playerPlaceholder"
 >
 
 <div class="placeholder-icon">
@@ -489,9 +638,9 @@ para comenzar.
 
 </div>
 
+
 </div>
 
-<!-- ESTADO -->
 
 <div class="player-status-row">
 
@@ -505,9 +654,10 @@ Listo para reproducir
 
 </div>
 
+
 <div
-    class="player-current"
-    id="playerCurrent"
+class="player-current"
+id="playerCurrent"
 >
 T1 · E1
 </div>
@@ -516,18 +666,19 @@ T1 · E1
 
 </div>
 
+
 <!-- =================================================
      ACCIONES INFERIORES
 ================================================== -->
 
 <div class="series-actions">
 
+
 <button
 id="restartButton"
 class="action-button"
 onclick="restartToFirstEpisode()"
 type="button"
-
 >
 
 <span>
@@ -540,11 +691,11 @@ Ver desde el inicio
 
 </button>
 
+
 <a
 href="#"
 id="infoAction"
 class="action-button info-action"
-
 >
 
 <span>
@@ -557,15 +708,19 @@ Ver más información
 
 </a>
 
+
 </div>
 
+
 </section>
+
 
 <!-- =====================================================
      INFORMACION
 ====================================================== -->
 
 <section class="bottom-info">
+
 
 <div class="info-card">
 
@@ -587,6 +742,7 @@ Cargando...
 
 </div>
 
+
 <div class="info-card">
 
 <div class="info-card-icon status-icon">
@@ -606,6 +762,7 @@ Listo para reproducir
 </div>
 
 </div>
+
 
 <div class="info-card">
 
@@ -627,13 +784,14 @@ T1 · E1
 
 </div>
 
+
 </section>
 
-<!-- MARCA LATERAL -->
 
 <div class="episodes-side-label">
 EPISODIOS
 </div>
+
 
 <!-- =====================================================
      FOOTER
@@ -643,7 +801,6 @@ EPISODIOS
 
 <div class="footer-inner">
 
-<!-- MARCA -->
 
 <div class="footer-brand">
 
@@ -666,46 +823,40 @@ series favoritas.
 
 </div>
 
-<!-- ENLACES -->
 
 <div class="footer-links">
 
 <a
 href="./index.html"
 class="footer-link"
-
 >
-
-Inicio </a>
+Inicio
+</a>
 
 <a
 href="#"
 id="footerInfoLink"
 class="footer-link"
-
 >
-
-Información </a>
+Información
+</a>
 
 <a
 href="#"
 class="footer-link"
-
 >
-
-Series </a>
+Series
+</a>
 
 <a
 href="#"
 class="footer-link"
-
 >
-
-Contacto </a>
+Contacto
+</a>
 
 </div>
 
-<!-- ESTADO -->
 
 <div class="footer-status">
 
@@ -717,13 +868,12 @@ CINEMAX activo
 
 </div>
 
+
 </div>
 
-<!-- LINEA -->
 
 <div class="footer-divider"></div>
 
-<!-- PARTE INFERIOR -->
 
 <div class="footer-bottom">
 
@@ -737,9 +887,12 @@ Serie
 
 </div>
 
+
 </footer>
 
+
 </main>
+
 
 <!-- =========================================================
      JAVASCRIPT DINÁMICO
@@ -839,17 +992,12 @@ async function cinemaXApiFetch(
     return fetch(
         url,
         {
-
             ...options,
-
             headers,
-
             credentials:
                 "include",
-
             cache:
                 "no-store"
-
         }
     );
 
@@ -865,7 +1013,9 @@ async function registerEpisodeView(
 ) {
 
     if (!currentSeries) {
+
         return;
+
     }
 
 
@@ -1001,7 +1151,6 @@ async function registerEpisodeView(
             await cinemaXApiFetch(
                 "/api/analytics/view",
                 {
-
                     method:
                         "POST",
 
@@ -1009,17 +1158,14 @@ async function registerEpisodeView(
                         true,
 
                     headers: {
-
                         "Content-Type":
                             "application/json"
-
                     },
 
                     body:
                         JSON.stringify(
                             payload
                         )
-
                 }
             );
 
@@ -1058,7 +1204,6 @@ async function registerEpisodeView(
         console.log(
             "CinemaX: visualización registrada.",
             {
-
                 serie:
                     title,
 
@@ -1070,9 +1215,9 @@ async function registerEpisodeView(
 
                 response:
                     result
-
             }
         );
+
 
     } catch (error) {
 
@@ -1102,9 +1247,13 @@ function getSeriesId() {
 
 
     return (
+
         params.get("id") ||
+
         params.get("serie") ||
+
         params.get("series")
+
     );
 
 }
@@ -1141,6 +1290,166 @@ function firstValue(...values) {
 
 
     return "";
+
+}
+
+
+/* =========================================================
+   NORMALIZAR URL DEL REPRODUCTOR
+========================================================= */
+
+/*
+    Google Drive:
+
+    /file/d/ID/view
+    /file/d/ID/edit
+    /file/d/ID
+    /open?id=ID
+
+    se convierten en:
+
+    /file/ID/preview
+
+    IMPORTANTE:
+
+    La función devuelve SOLO la URL.
+
+    NO devuelve Markdown.
+
+    Esto es necesario porque el resultado
+    será utilizado directamente como:
+
+    iframe.src = url;
+*/
+
+function normalizePlayerUrl(
+    rawUrl
+) {
+
+    let url =
+        clean(rawUrl);
+
+
+    if (!url) {
+
+        return "";
+
+    }
+
+
+    /*
+        Si ya es un preview de Drive,
+        lo dejamos como está.
+    */
+
+    if (
+        url.includes(
+            "drive.google.com/file/"
+        ) &&
+        url.includes(
+            "/preview"
+        )
+    ) {
+
+        return url;
+
+    }
+
+
+    /*
+        DRIVE /file/d/ID/...
+    */
+
+    const driveFileMatch =
+        url.match(
+            /drive\.google\.com\/file\/d\/([^/?#]+)/i
+        );
+
+
+    if (driveFileMatch) {
+
+        const fileId =
+            driveFileMatch[1];
+
+
+        return (
+            `https://drive.google.com/file/${fileId}/preview`
+        );
+
+    }
+
+
+    /*
+        DRIVE /open?id=ID
+    */
+
+    try {
+
+        const parsed =
+            new URL(
+                url,
+                window.location.href
+            );
+
+
+        if (
+            parsed.hostname
+                .toLowerCase()
+                .includes(
+                    "drive.google.com"
+                )
+        ) {
+
+            const id =
+                parsed.searchParams.get(
+                    "id"
+                );
+
+
+            if (id) {
+
+                return (
+                    `https://drive.google.com/file/${id}/preview`
+                );
+
+            }
+
+        }
+
+    } catch (error) {
+
+        console.warn(
+            "CinemaX: no se pudo analizar la URL del vídeo.",
+            error
+        );
+
+    }
+
+
+    /*
+        Algunos catálogos guardan solamente
+        el ID de Google Drive.
+    */
+
+    if (
+        /^[a-zA-Z0-9_-]{10,}$/.test(
+            url
+        )
+    ) {
+
+        return (
+            `https://drive.google.com/file/${url}/preview`
+        );
+
+    }
+
+
+    /*
+        Otros proveedores conservan su URL
+        directamente.
+    */
+
+    return url;
 
 }
 
@@ -1187,15 +1496,19 @@ function isSeries(item) {
         Array.isArray(
             item.seasons
         ) ||
+
         Array.isArray(
             item.temporadas
         ) ||
+
         Array.isArray(
             item.episodes
         ) ||
+
         Array.isArray(
             item.episodios
         ) ||
+
         Array.isArray(
             item.episodesBySeason
         )
@@ -1282,7 +1595,9 @@ function findSeries() {
 function normalizeSeasons(item) {
 
     if (!item) {
+
         return [];
+
     }
 
 
@@ -1294,11 +1609,6 @@ function normalizeSeasons(item) {
             item.episodesBySeason
         );
 
-
-    /*
-       Algunos catálogos pueden guardar
-       temporadas dentro de "episodes".
-    */
 
     if (
         !Array.isArray(seasons) &&
@@ -1320,21 +1630,6 @@ function normalizeSeasons(item) {
     }
 
 
-    /*
-       FORMATO:
-
-       [
-           [
-               "video1",
-               "video2"
-           ],
-           [
-               "video1",
-               "video2"
-           ]
-       ]
-    */
-
     if (
         seasons.every(
             season =>
@@ -1348,16 +1643,6 @@ function normalizeSeasons(item) {
 
     }
 
-
-    /*
-       FORMATO:
-
-       [
-           {
-               episodes: [...]
-           }
-       ]
-    */
 
     return seasons.map(
         season => {
@@ -1437,11 +1722,15 @@ function normalizeEpisodeUrl(
     episode
 ) {
 
+    let rawUrl = "";
+
+
     if (
         typeof episode === "string"
     ) {
 
-        return episode;
+        rawUrl =
+            episode;
 
     }
 
@@ -1451,34 +1740,26 @@ function normalizeEpisodeUrl(
         typeof episode === "object"
     ) {
 
-        return firstValue(
-
-            episode.url,
-
-            episode.video,
-
-            episode.src,
-
-            episode.link,
-
-            episode.drive,
-
-            episode.embed,
-
-            episode.videoUrl,
-
-            episode.video_url,
-
-            episode.playbackUrl,
-
-            episode.playback_url
-
-        );
+        rawUrl =
+            firstValue(
+                episode.url,
+                episode.video,
+                episode.src,
+                episode.link,
+                episode.drive,
+                episode.embed,
+                episode.videoUrl,
+                episode.video_url,
+                episode.playbackUrl,
+                episode.playback_url
+            );
 
     }
 
 
-    return "";
+    return normalizePlayerUrl(
+        rawUrl
+    );
 
 }
 
@@ -1562,7 +1843,9 @@ function getTotalEpisodes() {
 function getSavedEpisode() {
 
     if (!currentSeries) {
+
         return 1;
+
     }
 
 
@@ -1614,7 +1897,9 @@ function getSavedEpisode() {
 function saveCurrentEpisode() {
 
     if (!currentSeries) {
+
         return;
+
     }
 
 
@@ -1664,11 +1949,9 @@ function getEpisodeInfo(
             return {
 
                 seasonIndex:
-
                     seasonIndex,
 
                 episodeIndex:
-
                     remaining - 1
 
             };
@@ -1748,7 +2031,9 @@ function populateSeasonSelect() {
 
 
     if (!select) {
+
         return;
+
     }
 
 
@@ -1808,7 +2093,9 @@ function populateEpisodeSelect(
 
 
     if (!select) {
+
         return;
+
     }
 
 
@@ -1887,7 +2174,9 @@ function updateSelectors() {
 
 
     if (!seasonSelect) {
+
         return;
+
     }
 
 
@@ -1916,7 +2205,9 @@ function changeSeason() {
 
 
     if (!seasonSelect) {
+
         return;
+
     }
 
 
@@ -2035,7 +2326,9 @@ function changeEpisode() {
 function startEpisode() {
 
     if (!currentSeries) {
+
         return;
+
     }
 
 
@@ -2105,11 +2398,29 @@ function loadVideo(
         );
 
 
-    const url =
+    const originalUrl =
         getEpisodeUrl(
             info.seasonIndex,
             info.episodeIndex
         );
+
+
+    const url =
+        normalizePlayerUrl(
+            originalUrl
+        );
+
+
+    console.log(
+        "CinemaX Series: URL original del episodio:",
+        originalUrl
+    );
+
+
+    console.log(
+        "CinemaX Series: URL normalizada del reproductor:",
+        url
+    );
 
 
     if (!url) {
@@ -2130,13 +2441,56 @@ function loadVideo(
 
 
     if (!videoContainer) {
+
         return;
+
     }
 
+
+    /*
+        Limpiamos el reproductor anterior.
+    */
 
     videoContainer.innerHTML =
         "";
 
+
+    /*
+        Geometría del reproductor.
+    */
+
+    videoContainer.style.position =
+        "relative";
+
+    videoContainer.style.width =
+        "100%";
+
+    videoContainer.style.maxWidth =
+        "1050px";
+
+    videoContainer.style.aspectRatio =
+        "16 / 9";
+
+    videoContainer.style.height =
+        "auto";
+
+    videoContainer.style.overflow =
+        "hidden";
+
+    videoContainer.style.marginLeft =
+        "auto";
+
+    videoContainer.style.marginRight =
+        "auto";
+
+    videoContainer.style.background =
+        "#000";
+
+
+    /*
+        Crear iframe para Google Drive
+        y otros reproductores embebidos.
+    */
 
     const iframe =
         document.createElement(
@@ -2147,6 +2501,10 @@ function loadVideo(
     iframe.src =
         url;
 
+
+    /*
+        Permisos del reproductor.
+    */
 
     iframe.allow =
         "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
@@ -2159,24 +2517,95 @@ function loadVideo(
 
 
     iframe.setAttribute(
-        "loading",
-        "lazy"
-    );
-
-
-    iframe.setAttribute(
         "frameborder",
         "0"
     );
 
+
+    /*
+        No usamos lazy loading aquí.
+
+        Al pulsar "Iniciar" queremos que
+        Google Drive comience a cargar
+        inmediatamente.
+    */
+
+    iframe.setAttribute(
+        "loading",
+        "eager"
+    );
+
+
+    /*
+        Geometría exacta del iframe.
+    */
+
+    iframe.style.position =
+        "absolute";
+
+    iframe.style.inset =
+        "0";
+
+    iframe.style.width =
+        "100%";
+
+    iframe.style.height =
+        "100%";
+
+    iframe.style.minWidth =
+        "100%";
+
+    iframe.style.minHeight =
+        "100%";
+
+    iframe.style.maxWidth =
+        "none";
+
+    iframe.style.maxHeight =
+        "none";
+
+    iframe.style.margin =
+        "0";
+
+    iframe.style.padding =
+        "0";
+
+    iframe.style.border =
+        "none";
+
+    iframe.style.transform =
+        "none";
+
+    iframe.style.display =
+        "block";
+
+    iframe.style.zIndex =
+        "2";
+
+    iframe.style.background =
+        "#000";
+
+
+    /*
+        Insertar iframe.
+    */
 
     videoContainer.appendChild(
         iframe
     );
 
 
+    /*
+        Marcar reproductor activo.
+    */
+
     videoContainer.classList.add(
         "is-playing"
+    );
+
+
+    videoContainer.classList.add(
+        "movie-playing"
     );
 
 
@@ -2193,36 +2622,80 @@ function loadVideo(
     updateInterface();
 
 
-    document.getElementById(
-        "watchStatus"
-    ).textContent =
-        "Reproduciendo";
+    const watchStatus =
+        document.getElementById(
+            "watchStatus"
+        );
 
 
-    document.getElementById(
-        "playerStatusText"
-    ).textContent =
-        "Reproduciendo";
+    if (watchStatus) {
 
+        watchStatus.textContent =
+            "Reproduciendo";
+
+    }
+
+
+    const playerStatus =
+        document.getElementById(
+            "playerStatusText"
+        );
+
+
+    if (playerStatus) {
+
+        playerStatus.textContent =
+            "Reproduciendo";
+
+    }
+
+
+    /*
+        Registrar analytics.
+    */
 
     registerEpisodeView(
         episodeNumber
     );
 
 
+    /*
+        Mostrar en consola la URL final
+        que realmente recibió el iframe.
+    */
+
+    console.log(
+        "CinemaX Series: iframe creado correctamente.",
+        iframe.src
+    );
+
+
+    /*
+        Desplazar hasta el reproductor.
+    */
+
     setTimeout(
         () => {
 
-            document.getElementById(
-                "episodeSection"
-            ).scrollIntoView({
-                behavior:
-                    "smooth",
+            const section =
+                document.getElementById(
+                    "episodeSection"
+                );
 
-                block:
-                    "start"
 
-            });
+            if (section) {
+
+                section.scrollIntoView({
+
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+            }
 
         },
         100
@@ -2244,7 +2717,9 @@ function closePlayer() {
 
 
     if (!videoContainer) {
+
         return;
+
     }
 
 
@@ -2281,20 +2756,57 @@ function closePlayer() {
     );
 
 
+    videoContainer.classList.remove(
+        "movie-playing"
+    );
+
+
+    videoContainer.style.position =
+        "relative";
+
+    videoContainer.style.width =
+        "100%";
+
+    videoContainer.style.aspectRatio =
+        "16 / 9";
+
+    videoContainer.style.height =
+        "auto";
+
+    videoContainer.style.overflow =
+        "hidden";
+
+
     currentVideo =
         null;
 
 
-    document.getElementById(
-        "watchStatus"
-    ).textContent =
-        "Listo para reproducir";
+    const watchStatus =
+        document.getElementById(
+            "watchStatus"
+        );
 
 
-    document.getElementById(
-        "playerStatusText"
-    ).textContent =
-        "Listo para reproducir";
+    if (watchStatus) {
+
+        watchStatus.textContent =
+            "Listo para reproducir";
+
+    }
+
+
+    const playerStatus =
+        document.getElementById(
+            "playerStatusText"
+        );
+
+
+    if (playerStatus) {
+
+        playerStatus.textContent =
+            "Listo para reproducir";
+
+    }
 
 
     const heroButton =
@@ -2308,6 +2820,7 @@ function closePlayer() {
         heroButton.innerHTML =
             `
             <span>▶</span>
+
             <strong>
                 Iniciar
             </strong>
@@ -2403,7 +2916,9 @@ function updateStartButton() {
 
 
     if (!button || !text) {
+
         return;
+
     }
 
 
@@ -2469,7 +2984,9 @@ function updateBadge() {
 
 
     if (!badge || !current) {
+
         return;
+
     }
 
 
@@ -2506,7 +3023,9 @@ function updateProgress() {
 
 
     if (!progress) {
+
         return;
+
     }
 
 
@@ -2542,7 +3061,9 @@ function setReaction(
 ) {
 
     if (!currentSeries) {
+
         return;
+
     }
 
 
@@ -2619,7 +3140,9 @@ function setReaction(
 function loadReaction() {
 
     if (!currentSeries) {
+
         return;
+
     }
 
 
@@ -2674,7 +3197,9 @@ function renderTitle(
 
 
     if (!element) {
+
         return;
+
     }
 
 
@@ -2730,7 +3255,9 @@ function loadTrailer() {
 
 
     if (!trailer || !container) {
+
         return;
+
     }
 
 
@@ -2775,7 +3302,9 @@ function loadTrailer() {
 function renderSeriesInfo() {
 
     if (!currentSeries) {
+
         return;
+
     }
 
 
@@ -3081,25 +3610,6 @@ function addMetaDot(
    EXTRAER CATALOGO
 ========================================================= */
 
-/*
-   IMPORTANTE:
-
-   /api/catalog actualmente devuelve:
-
-   {
-       success: true,
-       catalog: [...]
-   }
-
-   Pero también aceptamos directamente:
-
-   [...]
-
-   y algunos formatos alternativos
-   para evitar que futuras modificaciones
-   rompan la plantilla.
-*/
-
 function extractCinemaXCatalog(
     data
 ) {
@@ -3221,17 +3731,6 @@ async function loadCatalog() {
         );
 
 
-        /*
-           EXTRAEMOS EL ARRAY REAL.
-
-           Antes se hacía:
-
-           if (!Array.isArray(data))
-
-           Eso provocaba el ERROR porque
-           el servidor devuelve un objeto.
-        */
-
         const extractedCatalog =
             extractCinemaXCatalog(
                 data
@@ -3273,14 +3772,6 @@ async function loadCatalog() {
         );
 
 
-        /*
-           BUSCAR LA SERIE.
-
-           Ejemplo:
-
-           ?id=serie-3
-        */
-
         currentSeries =
             findSeries();
 
@@ -3295,7 +3786,6 @@ async function loadCatalog() {
 
                     catalog:
                         catalog
-
                 }
             );
 
@@ -3316,10 +3806,6 @@ async function loadCatalog() {
         );
 
 
-        /*
-           NORMALIZAR TEMPORADAS
-        */
-
         const seasons =
             normalizeSeasons(
                 currentSeries
@@ -3337,10 +3823,6 @@ async function loadCatalog() {
             getTotalEpisodes()
         );
 
-
-        /*
-           COMPROBAR EPISODIOS
-        */
 
         if (
             !seasons.length ||
@@ -3362,10 +3844,6 @@ async function loadCatalog() {
 
         }
 
-
-        /*
-           RENDERIZAR TODO
-        */
 
         renderSeriesInfo();
 
