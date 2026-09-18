@@ -218,5 +218,27 @@
         "viewed_at": "2026-09-18T02:18:02.372858+00:00",
         "deleted_at": "2026-09-18T03:34:02.676779+00:00",
         "deleted_at_epoch": 1789702442.676791
+    },
+    {
+        "id": "4cdeff5a-39e2-4cb3-8f4d-9039880fa5c9",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "terror-2",
+        "title": "El Conjuro",
+        "type": "terror",
+        "image": "https://cinemx.onrender.com/Cinema-main/images/terror2.jpg",
+        "url": "../Cinema-main/terror2/enlace1.html",
+        "video": "",
+        "year": "",
+        "genre": "Terror",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "VcUjMahIH0n6Zl_krxg4K8N5WnKlfu9GszJ_szCyh0c",
+        "timestamp": "2026-09-18T02:18:01.416369+00:00",
+        "timestamp_epoch": 1789697881.416379,
+        "viewed_at": "2026-09-18T02:18:01.416379+00:00",
+        "deleted_at": "2026-09-18T03:34:07.775243+00:00",
+        "deleted_at_epoch": 1789702447.7752604
     }
 ]
