@@ -258,5 +258,25 @@
         "timestamp": "2026-09-19T01:05:50.135090+00:00",
         "timestamp_epoch": 1789779950.1351025,
         "viewed_at": "2026-09-19T01:05:50.135103+00:00"
+    },
+    {
+        "id": "bc0ec461-e3a0-48ef-8529-3ab25d35c44f",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "stranger-things",
+        "title": "Stranger Things",
+        "type": "serie",
+        "image": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
+        "url": "",
+        "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "year": "2022",
+        "genre": "Ciencia ficción, misterio, suspenso",
+        "duration": "50 min",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "ppHl7EUXkkj7DpB8uXyTyCxTmqzKjP4xm7njqbiiX6E",
+        "timestamp": "2026-09-19T02:51:07.567894+00:00",
+        "timestamp_epoch": 1789786267.5679085,
+        "viewed_at": "2026-09-19T02:51:07.567908+00:00"
     }
 ]
