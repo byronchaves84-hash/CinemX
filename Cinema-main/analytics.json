@@ -158,5 +158,25 @@
         "timestamp": "2026-09-19T00:04:54.925388+00:00",
         "timestamp_epoch": 1789776294.9253974,
         "viewed_at": "2026-09-19T00:04:54.925397+00:00"
+    },
+    {
+        "id": "4a8b80e3-3476-4c24-a1f4-8d0d94a7148a",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "serie-5",
+        "title": "AliasJJ",
+        "type": "serie",
+        "image": "https://cinemx.onrender.com/Cinema-main/images/serie5.jpg",
+        "url": "../Cinema-main/Serie%205/index.html",
+        "video": "",
+        "year": "",
+        "genre": "Serie",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "p_7xkqDKvIftseL_s66R0zAxk4bna6TLTRhb9fu0TRc",
+        "timestamp": "2026-09-19T01:02:20.293268+00:00",
+        "timestamp_epoch": 1789779740.2932866,
+        "viewed_at": "2026-09-19T01:02:20.293287+00:00"
     }
 ]
