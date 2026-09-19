@@ -18,5 +18,25 @@
         "timestamp": "2026-09-19T00:01:41.352927+00:00",
         "timestamp_epoch": 1789776101.3529372,
         "viewed_at": "2026-09-19T00:01:41.352937+00:00"
+    },
+    {
+        "id": "f7cd4694-1f26-4d25-8618-8cad1a5bdcf6",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "serie-4",
+        "title": "13 Reasons Why",
+        "type": "Serie",
+        "image": "../Cinema-main/images/serie4.jpg",
+        "url": "../Cinema-main/Serie%204/index.html",
+        "video": "https://drive.google.com/file/d/1jfLyfVYxu31fNpVWJDJtgAWrHyRi7v7K/preview",
+        "year": "2017",
+        "genre": "Suicidio",
+        "duration": "",
+        "rating": "8.4",
+        "season": 1,
+        "episode": 1,
+        "session_id": "T5z9McTWgugDzP0SOEkRX0fxKYehjo4R9KfBzOM1g4w",
+        "timestamp": "2026-09-19T00:01:43.537485+00:00",
+        "timestamp_epoch": 1789776103.5374994,
+        "viewed_at": "2026-09-19T00:01:43.537500+00:00"
     }
 ]
