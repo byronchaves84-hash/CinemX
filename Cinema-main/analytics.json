@@ -298,5 +298,25 @@
         "timestamp": "2026-09-19T02:51:10.257649+00:00",
         "timestamp_epoch": 1789786270.2576678,
         "viewed_at": "2026-09-19T02:51:10.257668+00:00"
+    },
+    {
+        "id": "71bd01aa-d645-44b0-9c1c-e053f197f2b6",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "la-última-señal",
+        "title": "La Última Señal",
+        "type": "pelicula",
+        "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728",
+        "url": "",
+        "video": "https://cdn.truefilesize.com/mp4/sample-10mb.mp4",
+        "year": "2026",
+        "genre": "Ciencia ficción, misterio, suspenso",
+        "duration": "10 segundos",
+        "rating": "8.4",
+        "season": "",
+        "episode": "",
+        "session_id": "ppHl7EUXkkj7DpB8uXyTyCxTmqzKjP4xm7njqbiiX6E",
+        "timestamp": "2026-09-19T02:52:21.600556+00:00",
+        "timestamp_epoch": 1789786341.6005678,
+        "viewed_at": "2026-09-19T02:52:21.600568+00:00"
     }
 ]
