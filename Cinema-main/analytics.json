@@ -238,5 +238,25 @@
         "timestamp": "2026-09-19T01:05:47.656019+00:00",
         "timestamp_epoch": 1789779947.656027,
         "viewed_at": "2026-09-19T01:05:47.656027+00:00"
+    },
+    {
+        "id": "82cb0d94-13d3-42ac-8843-7412d9d4cc30",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "stranger-things",
+        "title": "Stranger Things",
+        "type": "serie",
+        "image": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
+        "url": "",
+        "video": "https://drive.google.com/file/d/1Ohv8_HWGRsVS6MqyJmV8_OWAbVSXWWLa/preview",
+        "year": "2022",
+        "genre": "Ciencia ficción, misterio, suspenso",
+        "duration": "50 min",
+        "rating": "",
+        "season": 1,
+        "episode": 1,
+        "session_id": "jaZwwUwGsIlyL9613D5I2pFUce6XcV5qLEYEbmaa9Ws",
+        "timestamp": "2026-09-19T01:05:50.135090+00:00",
+        "timestamp_epoch": 1789779950.1351025,
+        "viewed_at": "2026-09-19T01:05:50.135103+00:00"
     }
 ]
