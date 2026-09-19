@@ -98,5 +98,25 @@
         "timestamp": "2026-09-19T00:04:24.419970+00:00",
         "timestamp_epoch": 1789776264.419979,
         "viewed_at": "2026-09-19T00:04:24.419979+00:00"
+    },
+    {
+        "id": "8f738a8a-ca93-4a46-b312-1eabe6a62752",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "pelicula-12",
+        "title": "Película 12",
+        "type": "Película",
+        "image": "images/anime12.jpg",
+        "url": "enlace12/enlace1.html",
+        "video": "enlace12/enlace1.html",
+        "year": "2026",
+        "genre": "Fantasía",
+        "duration": "2h",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "tY6HT7ldIZQ-38x2O-CScC9yyl8rA5U8atTS_CSfvvk",
+        "timestamp": "2026-09-19T00:04:25.970430+00:00",
+        "timestamp_epoch": 1789776265.970449,
+        "viewed_at": "2026-09-19T00:04:25.970449+00:00"
     }
 ]
