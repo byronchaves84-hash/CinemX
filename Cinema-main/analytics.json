@@ -58,5 +58,25 @@
         "timestamp": "2026-09-19T00:04:18.557673+00:00",
         "timestamp_epoch": 1789776258.5576813,
         "viewed_at": "2026-09-19T00:04:18.557681+00:00"
+    },
+    {
+        "id": "d1f8afed-9354-4966-b6c3-4e6c702fa358",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "the-batman",
+        "title": "The Batman",
+        "type": "Película",
+        "image": "https://image.tmdb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+        "url": "../Cinema-main/The-Batman/index.html",
+        "video": "../Cinema-main/The-Batman/index.html",
+        "year": "2022",
+        "genre": "Acción, Crimen",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "tY6HT7ldIZQ-38x2O-CScC9yyl8rA5U8atTS_CSfvvk",
+        "timestamp": "2026-09-19T00:04:19.303408+00:00",
+        "timestamp_epoch": 1789776259.303419,
+        "viewed_at": "2026-09-19T00:04:19.303419+00:00"
     }
 ]
