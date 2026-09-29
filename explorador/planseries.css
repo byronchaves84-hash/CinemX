@@ -1306,3 +1306,94 @@ footer {
     background: #e50914;
     color: #fff;
 }
+
+
+
+
+
+
+
+/* =========================================================
+   REPRODUCTOR RESPONSIVE - MOVIL
+   Mantiene el video completamente dentro del cuadro
+========================================================= */
+
+.video-container,
+#videoContainer {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* El iframe de Google Drive */
+.video-container iframe,
+#videoContainer iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   MOVIL
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .video-container,
+    #videoContainer {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .video-container iframe,
+    #videoContainer iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================================
+   MOVILES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .video-container,
+    #videoContainer {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .video-container iframe,
+    #videoContainer iframe {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
