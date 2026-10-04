@@ -1275,24 +1275,16 @@ class CinemaXHandler(
                 "success"
             ):
 
-                # ====================================================
-                # SINCRONIZACION GITHUB COMO TAREA SECUNDARIA
-                # ====================================================
-                # El archivo local ya fue escrito y reemplazado.
-                # Por eso un fallo de GitHub NO debe convertir un
-                # registro exitoso en un error para el usuario.
-                # ====================================================
-
                 print(
-                    "⚠️ CINEMAX: guardado LOCAL correcto."
+                    "⚠️ LOCAL GUARDADO"
                 )
 
                 print(
-                    "⚠️ GITHUB NO SINCRONIZADO:",
+                    "❌ GITHUB NO GUARDADO:",
                     github_result.get("error")
                 )
 
-                # NO devolvemos False: el dato local sí se guardó.
+                return False
 
         return True
 
@@ -2457,7 +2449,7 @@ class CinemaXHandler(
         if path == "/api/users/logout":
             self.user_logout(); return
 
-        if path.startswith("/api/users/") and path.endswith("/disconnect"):
+        if path.startswith("/api/users/session/") and path.endswith("/disconnect"):
             if not self.require_admin(): return
 
 
@@ -4088,198 +4080,44 @@ class CinemaXHandler(
                 500
             )
 
-# ========================================================
-# LISTAR SESIONES
-# ========================================================
+    # ========================================================
+    # LISTAR SESIONES
+    # ========================================================
 
-def get_sessions(
-    self
-):
+    def get_sessions(
+        self
+    ):
 
-    try:
+        try:
 
-        sessions = self.load_sessions()
+            sessions = self.load_sessions()
 
-        users = self.load_json_file(
-            USERS_FILE
-        )
-
-        user_map = {}
-
-        for user in users:
-
-            if not isinstance(
-                user,
-                dict
-            ):
-                continue
-
-            user_id = clean_id(
-                user.get("id")
+            users = self.load_json_file(
+                USERS_FILE
             )
 
-            if not user_id:
-                continue
+            user_map = {}
 
-            user_map[
-                user_id
-            ] = user
+            for user in users:
 
-        active_sessions = []
+                if not isinstance(
+                    user,
+                    dict
+                ):
+                    continue
 
-        for session in sessions:
+                user_id = clean_id(
+                    user.get("id")
+                )
 
-            if not isinstance(
-                session,
-                dict
-            ):
-                continue
+                if not user_id:
+                    continue
 
-            if not session.get(
-                "active",
-                False
-            ):
-                continue
+                user_map[
+                    user_id
+                ] = user
 
-            session_id = clean_id(
-                session.get("id")
-            )
-
-            user_id = clean_id(
-                session.get("user_id")
-            )
-
-            if not session_id:
-                continue
-
-            user = user_map.get(
-                user_id,
-                {}
-            )
-
-            active_sessions.append(
-                {
-                    "id":
-                        session_id,
-
-                    "session_id":
-                        session_id,
-
-                    "sessionId":
-                        session_id,
-
-                    "user_id":
-                        user_id,
-
-                    "username":
-                        user.get(
-                            "username",
-                            ""
-                        ),
-
-                    "email":
-                        user.get(
-                            "email",
-                            ""
-                        ),
-
-                    "role":
-                        user.get(
-                            "role",
-                            "user"
-                        ),
-
-                    "active":
-                        True,
-
-                    "created_at":
-                        session.get(
-                            "created_at",
-                            ""
-                        ),
-
-                    "created_at_epoch":
-                        session.get(
-                            "created_at_epoch",
-                            0
-                        ),
-
-                    "last_activity":
-                        session.get(
-                            "last_activity",
-                            ""
-                        ),
-
-                    "last_activity_epoch":
-                        session.get(
-                            "last_activity_epoch",
-                            0
-                        )
-                }
-            )
-
-        self.send_json(
-            {
-                "success": True,
-                "sessions":
-                    active_sessions,
-                "count":
-                    len(active_sessions)
-            }
-        )
-
-    except Exception as e:
-
-        print(
-            "ERROR obteniendo sesiones:",
-            e
-        )
-
-        self.send_json(
-            {
-                "success": False,
-                "error":
-                    "Error obteniendo sesiones."
-            },
-            500
-        )
-
-# ========================================================
-# DESCONECTAR SESIÓN INDIVIDUAL
-# ========================================================
-
-def disconnect_session(
-    self,
-    session_id
-):
-
-    try:
-
-        session_id = clean_id(
-            session_id
-        )
-
-        if not session_id:
-
-            self.send_json(
-                {
-                    "success": False,
-                    "error":
-                        "ID de sesión no válido."
-                },
-                400
-            )
-
-            return
-
-        with SESSIONS_LOCK:
-
-            sessions = self.load_json_file(
-                SESSIONS_FILE
-            )
-
-            found = False
-            current = now_iso()
+            active_sessions = []
 
             for session in sessions:
 
@@ -4289,78 +4127,232 @@ def disconnect_session(
                 ):
                     continue
 
-                if (
-                    clean_id(
-                        session.get("id")
-                    )
-                    ==
-                    session_id
+                if not session.get(
+                    "active",
+                    False
                 ):
+                    continue
 
-                    session[
-                        "active"
-                    ] = False
-
-                    session[
-                        "disconnected_at"
-                    ] = current
-
-                    found = True
-
-                    break
-
-            if found:
-
-                self.save_json_file(
-                    SESSIONS_FILE,
-                    sessions
+                session_id = clean_id(
+                    session.get("id")
                 )
 
-        if not found:
+                user_id = clean_id(
+                    session.get("user_id")
+                )
+
+                if not session_id:
+                    continue
+
+                user = user_map.get(
+                    user_id,
+                    {}
+                )
+
+                active_sessions.append(
+                    {
+                        "id":
+                            session_id,
+
+                        "session_id":
+                            session_id,
+
+                        "sessionId":
+                            session_id,
+
+                        "user_id":
+                            user_id,
+
+                        "username":
+                            user.get(
+                                "username",
+                                ""
+                            ),
+
+                        "email":
+                            user.get(
+                                "email",
+                                ""
+                            ),
+
+                        "role":
+                            user.get(
+                                "role",
+                                "user"
+                            ),
+
+                        "active":
+                            True,
+
+                        "created_at":
+                            session.get(
+                                "created_at",
+                                ""
+                            ),
+
+                        "created_at_epoch":
+                            session.get(
+                                "created_at_epoch",
+                                0
+                            ),
+
+                        "last_activity":
+                            session.get(
+                                "last_activity",
+                                ""
+                            ),
+
+                        "last_activity_epoch":
+                            session.get(
+                                "last_activity_epoch",
+                                0
+                            )
+                    }
+                )
+
+            self.send_json(
+                {
+                    "success": True,
+                    "sessions":
+                        active_sessions,
+                    "count":
+                        len(active_sessions)
+                }
+            )
+
+        except Exception as e:
+
+            print(
+                "ERROR obteniendo sesiones:",
+                e
+            )
 
             self.send_json(
                 {
                     "success": False,
                     "error":
-                        "Sesión no encontrada."
+                        "Error obteniendo sesiones."
                 },
-                404
+                500
             )
 
-            return
+    # ========================================================
+    # DESCONECTAR SESIÓN INDIVIDUAL
+    # ========================================================
 
-        print(
-            "SESIÓN DESCONECTADA:",
-            session_id
-        )
+    def disconnect_session(
+        self,
+        session_id
+    ):
 
-        self.send_json(
-            {
-                "success": True,
-                "message":
-                    "Sesión desconectada correctamente.",
-                "session_id":
-                    session_id,
-                "sessionId":
-                    session_id
-            }
-        )
+        try:
 
-    except Exception as e:
+            session_id = clean_id(
+                session_id
+            )
 
-        print(
-            "ERROR desconectando sesión:",
-            e
-        )
+            if not session_id:
 
-        self.send_json(
-            {
-                "success": False,
-                "error":
-                    "Error desconectando sesión."
-            },
-            500
-        )
+                self.send_json(
+                    {
+                        "success": False,
+                        "error":
+                            "ID de sesión no válido."
+                    },
+                    400
+                )
+
+                return
+
+            with SESSIONS_LOCK:
+
+                sessions = self.load_json_file(
+                    SESSIONS_FILE
+                )
+
+                found = False
+                current = now_iso()
+
+                for session in sessions:
+
+                    if not isinstance(
+                        session,
+                        dict
+                    ):
+                        continue
+
+                    if (
+                        clean_id(
+                            session.get("id")
+                        )
+                        ==
+                        session_id
+                    ):
+
+                        session[
+                            "active"
+                        ] = False
+
+                        session[
+                            "disconnected_at"
+                        ] = current
+
+                        found = True
+
+                        break
+
+                if found:
+
+                    self.save_json_file(
+                        SESSIONS_FILE,
+                        sessions
+                    )
+
+            if not found:
+
+                self.send_json(
+                    {
+                        "success": False,
+                        "error":
+                            "Sesión no encontrada."
+                    },
+                    404
+                )
+
+                return
+
+            print(
+                "SESIÓN DESCONECTADA:",
+                session_id
+            )
+
+            self.send_json(
+                {
+                    "success": True,
+                    "message":
+                        "Sesión desconectada correctamente.",
+                    "session_id":
+                        session_id,
+                    "sessionId":
+                        session_id
+                }
+            )
+
+        except Exception as e:
+
+            print(
+                "ERROR desconectando sesión:",
+                e
+            )
+
+            self.send_json(
+                {
+                    "success": False,
+                    "error":
+                        "Error desconectando sesión."
+                },
+                500
+            )
 
     # ========================================================
     # UPDATE USER
