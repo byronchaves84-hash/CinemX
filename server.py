@@ -1275,8 +1275,13 @@ class CinemaXHandler(
                 "success"
             ):
 
+                # El archivo local ya se guardó correctamente.
+                # No devolver False: eso hace que el panel muestre
+                # "No se pudo guardar el catálogo" aunque el cambio
+                # sí esté aplicado localmente.
                 print(
-                    "⚠️ LOCAL GUARDADO"
+                    "⚠️ CAMBIO GUARDADO LOCALMENTE; "
+                    "SINCRONIZACIÓN GITHUB PENDIENTE"
                 )
 
                 print(
@@ -1284,7 +1289,9 @@ class CinemaXHandler(
                     github_result.get("error")
                 )
 
-                return False
+                # El guardado local fue exitoso. Se informa como tal
+                # para que la interfaz no muestre un falso error.
+                return True
 
         return True
 
