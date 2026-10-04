@@ -1171,5 +1171,21 @@
         "type": "serie",
         "poster": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
         "backdrop": ""
+    },
+    {
+        "title": "Los Pitufos",
+        "category": "pelicula",
+        "type": "pelicula",
+        "genre": "Animado",
+        "year": "",
+        "image": "",
+        "poster": "",
+        "backdrop": "",
+        "rating": "",
+        "duration": "",
+        "description": "",
+        "featured": false,
+        "session_id": "CMb-f1cSNM0NM0a1E3bw6EFD8zmTBunMFBcINAMxjBo",
+        "id": "los-pitufos"
     }
 ]
