@@ -438,5 +438,25 @@
         "timestamp": "2026-10-04T19:01:53.477047+00:00",
         "timestamp_epoch": 1791140513.4770617,
         "viewed_at": "2026-10-04T19:01:53.477062+00:00"
+    },
+    {
+        "id": "4613badd-453a-41a2-a592-72c5cac837c8",
+        "user_id": "admin-001",
+        "content_id": "los-pitufos",
+        "title": "Los Pitufos",
+        "type": "pelicula",
+        "image": "",
+        "url": "",
+        "video": "",
+        "year": "",
+        "genre": "Animado",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "gkVW_OB_RLeAja1bOEiv0h9T37pE-d9Ajaeu3-bop88",
+        "timestamp": "2026-10-04T19:01:55.864224+00:00",
+        "timestamp_epoch": 1791140515.8642352,
+        "viewed_at": "2026-10-04T19:01:55.864235+00:00"
     }
 ]
