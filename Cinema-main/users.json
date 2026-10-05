@@ -32,14 +32,6 @@
         "createdAt": "2026-09-17T02:22:01.315839+00:00"
     },
     {
-        "id": "9315aa90-a984-47a9-a829-58bb6cd9bdf0",
-        "username": "weo",
-        "email": "wero@gmaicl.com",
-        "password_hash": "pbkdf2_sha256$310000$DA7cTSWN3hIzDYEDv3QyUQ==$jrYYnsWNvut7mOkpQbhvT+PJ5x2Pi8HvLkjM/f2hghc=",
-        "role": "user",
-        "createdAt": "2026-10-04T18:59:35.421990+00:00"
-    },
-    {
         "id": "1cdcfd9b-f13b-4d1b-b241-fd5e30c47413",
         "username": "Byron24",
         "email": "byron24@gmail.com",
