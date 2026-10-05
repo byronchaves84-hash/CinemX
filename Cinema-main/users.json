@@ -38,5 +38,13 @@
         "password_hash": "pbkdf2_sha256$310000$DA7cTSWN3hIzDYEDv3QyUQ==$jrYYnsWNvut7mOkpQbhvT+PJ5x2Pi8HvLkjM/f2hghc=",
         "role": "user",
         "createdAt": "2026-10-04T18:59:35.421990+00:00"
+    },
+    {
+        "id": "1cdcfd9b-f13b-4d1b-b241-fd5e30c47413",
+        "username": "Byron24",
+        "email": "byron24@gmail.com",
+        "password_hash": "pbkdf2_sha256$310000$lClzOjHZBl+pPbVHz4ob9A==$KK0BEIHEIHjZtJCk0DxnjHmwrgLbkh352R3cGZEoweo=",
+        "role": "user",
+        "createdAt": "2026-10-05T03:31:12.449195+00:00"
     }
 ]
