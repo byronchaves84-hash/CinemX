@@ -618,5 +618,25 @@
         "timestamp": "2026-10-05T03:46:00.566622+00:00",
         "timestamp_epoch": 1791171960.5666378,
         "viewed_at": "2026-10-05T03:46:00.566638+00:00"
+    },
+    {
+        "id": "e4f1dea1-c478-4e76-9643-967e801255ce",
+        "user_id": "799ac0de-5995-45b8-89c0-58942a8868e4",
+        "content_id": "serie-3",
+        "title": "Breaking Bad",
+        "type": "serie",
+        "image": "https://cinemx.onrender.com/Cinema-main/images/serie3.jpg",
+        "url": "../Cinema-main/Serie3/index.html",
+        "video": "../Cinema-main/Serie3/index.html",
+        "year": "",
+        "genre": "Serie",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "diAYEfkEZSVlh1euK-uwL_2SOYDM8rnSiTEy3PO2wJo",
+        "timestamp": "2026-10-09T01:29:10.488861+00:00",
+        "timestamp_epoch": 1791509350.4888704,
+        "viewed_at": "2026-10-09T01:29:10.488870+00:00"
     }
 ]
