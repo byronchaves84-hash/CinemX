@@ -46,5 +46,13 @@
         "password_hash": "pbkdf2_sha256$310000$25MWC9pT5+o/b9EzdIbuHw==$C//uVbr8U1RvWyr3zz2pXzNP7vObyEjRGvQM9MiEVmg=",
         "role": "user",
         "createdAt": "2026-10-09T01:26:42.329461+00:00"
+    },
+    {
+        "id": "799ac0de-5995-45b8-89c0-58942a8868e4",
+        "username": "Josue",
+        "email": "josue@gmail.com",
+        "password_hash": "pbkdf2_sha256$310000$Q6vfkKHg7a53ZHajTfgRnw==$QC1k7qRfhYl8EZVDW5FqyjrrSfpil5V0a8cCrnsvTLw=",
+        "role": "user",
+        "createdAt": "2026-10-09T01:27:37.420527+00:00"
     }
 ]
