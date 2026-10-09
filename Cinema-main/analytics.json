@@ -638,5 +638,25 @@
         "timestamp": "2026-10-09T01:29:10.488861+00:00",
         "timestamp_epoch": 1791509350.4888704,
         "viewed_at": "2026-10-09T01:29:10.488870+00:00"
+    },
+    {
+        "id": "cdcb22bb-6860-4d3a-a7d9-56685e646393",
+        "user_id": "799ac0de-5995-45b8-89c0-58942a8868e4",
+        "content_id": "serie-3",
+        "title": "Breaking Bad",
+        "type": "Serie",
+        "image": "../Cinema-main/images/serie3.jpg",
+        "url": "../Cinema-main/Serie3/index.html",
+        "video": "https://drive.google.com/file/d/1A6150sx30rk1-0wx7ABHUGNfbXoyf2gD/preview",
+        "year": "",
+        "genre": "Serie",
+        "duration": "",
+        "rating": "",
+        "season": 1,
+        "episode": 1,
+        "session_id": "diAYEfkEZSVlh1euK-uwL_2SOYDM8rnSiTEy3PO2wJo",
+        "timestamp": "2026-10-09T01:29:14.151544+00:00",
+        "timestamp_epoch": 1791509354.1515553,
+        "viewed_at": "2026-10-09T01:29:14.151555+00:00"
     }
 ]
