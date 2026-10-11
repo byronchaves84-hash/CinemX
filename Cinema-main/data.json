@@ -153,9 +153,9 @@
         "year": "2026",
         "genre": "Aventura",
         "duration": "2h",
-        "description": "Una aventura de WALL.E.",
+        "description": "Una aventura disponible en CinemaX.",
         "poster": "https://image.tmdb.org/t/p/original/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
-        "backdrop": "https://drive.google.com/file/d/1E9Db3llBhsLviqQzc2sdb4zKZfbiyvF0/preview",
+        "backdrop": "https://drive.google.com/file/d/1E9Db3llBhsLviqQzc2sdb4zKZfbiyvF0/view?usp=drive_link",
         "rating": "",
         "featured": false,
         "session_id": "Ma-ZQGTHG8c1UAzuRZxhc6qaO2HXspWGgj6kAXLv4uc"
@@ -1193,5 +1193,21 @@
         "session_id": "CMb-f1cSNM0NM0a1E3bw6EFD8zmTBunMFBcINAMxjBo",
         "id": "los-pitufos",
         "video": "https://drive.google.com/file/d/1ATGcXZcVOmk4KEWbG-cw2kaYTyzEtL3I/preview"
+    },
+    {
+        "title": "WALL·E",
+        "category": "pelicula",
+        "type": "pelicula",
+        "genre": "Aventura",
+        "year": "2026",
+        "image": "https://image.tmdb.org/t/p/original/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
+        "poster": "https://image.tmdb.org/t/p/original/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
+        "backdrop": "https://drive.google.com/file/d/1E9Db3llBhsLviqQzc2sdb4zKZfbiyvF0/view?usp=drive_link",
+        "rating": "",
+        "duration": "2h",
+        "description": "Una aventura disponible en CinemaX.",
+        "featured": false,
+        "session_id": "449Tsbvl1utPZ8nMn2VwakH4Aj3oMwpSSqgj-uaPQY4",
+        "id": "walle"
     }
 ]
