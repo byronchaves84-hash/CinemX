@@ -778,5 +778,25 @@
         "timestamp": "2026-10-11T23:27:19.028759+00:00",
         "timestamp_epoch": 1791761239.0287716,
         "viewed_at": "2026-10-11T23:27:19.028772+00:00"
+    },
+    {
+        "id": "b090e827-eaf1-4066-bc9c-b4828ca7d8ec",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "los-pitufos",
+        "title": "Los Pitufos",
+        "type": "pelicula",
+        "image": "https://moviepostermexico.com/cdn/shop/products/smurfs_xxlg_1024x1024%402x.jpg?v=1587681230&utm_source=chatgpt.com",
+        "url": "",
+        "video": "https://drive.google.com/file/d/1ATGcXZcVOmk4KEWbG-cw2kaYTyzEtL3I/preview",
+        "year": "",
+        "genre": "Animado",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "dqChaBgvg7wpISF8TKjLrS1wRF4F0VM027a0PdOehVQ",
+        "timestamp": "2026-10-11T23:27:22.816483+00:00",
+        "timestamp_epoch": 1791761242.8164968,
+        "viewed_at": "2026-10-11T23:27:22.816497+00:00"
     }
 ]
