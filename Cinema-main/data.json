@@ -145,15 +145,20 @@
     },
     {
         "id": "pelicula-16",
-        "title": "Película 16",
-        "type": "Película",
-        "category": "peliculas",
+        "title": "WALL·E",
+        "type": "pelicula",
+        "category": "pelicula",
         "url": "enlace16/enlace1.html",
-        "image": "images/anime16.jpg",
+        "image": "https://www.impawards.com/2008/wall_e_ver3.html",
         "year": "2026",
         "genre": "Aventura",
         "duration": "2h",
-        "description": "Una aventura disponible en CinemaX."
+        "description": "Una aventura disponible en CinemaX.",
+        "poster": "https://www.impawards.com/2008/wall_e_ver3.html",
+        "backdrop": "https://drive.google.com/file/d/1E9Db3llBhsLviqQzc2sdb4zKZfbiyvF0/view?usp=drive_link",
+        "rating": "",
+        "featured": false,
+        "session_id": "Ma-ZQGTHG8c1UAzuRZxhc6qaO2HXspWGgj6kAXLv4uc"
     },
     {
         "id": "pelicula-17",
