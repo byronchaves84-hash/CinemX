@@ -1,18 +1,5 @@
 [
     {
-        "id": "pelicula-14",
-        "title": "Película 14",
-        "type": "Película",
-        "category": "terror",
-        "url": "enlace14/enlace1.html",
-        "image": "images/anime14.jpg",
-        "year": "2026",
-        "genre": "Terror",
-        "duration": "1h 50m",
-        "description": "Terror disponible en CinemaX.",
-        "deletedAt": "2026-10-12T03:04:59.562215+00:00"
-    },
-    {
         "id": "pelicula-11",
         "title": "Película 11",
         "type": "Película",
