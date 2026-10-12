@@ -109,5 +109,18 @@
         "duration": "2h 10m",
         "description": "Ciencia ficción disponible en CinemaX.",
         "deletedAt": "2026-10-12T03:16:24.515300+00:00"
+    },
+    {
+        "id": "pelicula-10",
+        "title": "Película 10",
+        "type": "Película",
+        "category": "peliculas",
+        "url": "enlace10/enlace1.html",
+        "image": "images/anime10.jpg",
+        "year": "2026",
+        "genre": "Drama",
+        "duration": "2h",
+        "description": "Drama y emoción en CinemaX.",
+        "deletedAt": "2026-10-12T03:16:26.979220+00:00"
     }
 ]
