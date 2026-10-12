@@ -98,19 +98,6 @@
         "deletedAt": "2026-10-12T03:15:34.926971+00:00"
     },
     {
-        "id": "pelicula-12",
-        "title": "Película 12",
-        "type": "Película",
-        "category": "peliculas",
-        "url": "enlace12/enlace1.html",
-        "image": "images/anime12.jpg",
-        "year": "2026",
-        "genre": "Fantasía",
-        "duration": "2h",
-        "description": "Una aventura fantástica en CinemaX.",
-        "deletedAt": "2026-10-12T03:15:37.468383+00:00"
-    },
-    {
         "id": "pelicula-11",
         "title": "Película 11",
         "type": "Película",
@@ -121,19 +108,6 @@
         "genre": "Ciencia ficción",
         "duration": "2h 10m",
         "description": "Ciencia ficción disponible en CinemaX.",
-        "deletedAt": "2026-10-12T03:15:39.689528+00:00"
-    },
-    {
-        "id": "pelicula-5",
-        "title": "Película 5",
-        "type": "Película",
-        "category": "peliculas",
-        "url": "enlace5/enlace1.html",
-        "image": "images/anime5.jpg",
-        "year": "2026",
-        "genre": "Acción",
-        "duration": "2h",
-        "description": "Una película disponible en CinemaX.",
-        "deletedAt": "2026-10-12T03:15:41.892950+00:00"
+        "deletedAt": "2026-10-12T03:16:24.515300+00:00"
     }
 ]
