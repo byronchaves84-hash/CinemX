@@ -83,5 +83,18 @@
         "duration": "1h 50m",
         "description": "Terror disponible en CinemaX.",
         "deletedAt": "2026-10-12T03:04:59.562215+00:00"
+    },
+    {
+        "id": "pelicula-13",
+        "title": "Película 13",
+        "type": "Película",
+        "category": "peliculas",
+        "url": "enlace13/enlace1.html",
+        "image": "images/anime13.jpg",
+        "year": "2026",
+        "genre": "Acción",
+        "duration": "2h 20m",
+        "description": "Una película de acción disponible en CinemaX.",
+        "deletedAt": "2026-10-12T03:15:34.926971+00:00"
     }
 ]
