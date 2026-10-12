@@ -109,5 +109,18 @@
         "duration": "2h",
         "description": "Una aventura fantástica en CinemaX.",
         "deletedAt": "2026-10-12T03:15:37.468383+00:00"
+    },
+    {
+        "id": "pelicula-11",
+        "title": "Película 11",
+        "type": "Película",
+        "category": "peliculas",
+        "url": "enlace11/enlace1.html",
+        "image": "images/anime11.jpg",
+        "year": "2026",
+        "genre": "Ciencia ficción",
+        "duration": "2h 10m",
+        "description": "Ciencia ficción disponible en CinemaX.",
+        "deletedAt": "2026-10-12T03:15:39.689528+00:00"
     }
 ]
