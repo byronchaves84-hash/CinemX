@@ -150,16 +150,16 @@
         "deletedAt": "2026-10-12T03:16:33.761884+00:00"
     },
     {
-        "id": "pelicula-7",
-        "title": "Película 7",
+        "id": "pelicula-6",
+        "title": "Película 6",
         "type": "Película",
         "category": "terror",
-        "url": "enlace7/enlace1.html",
-        "image": "images/anime7.jpeg",
+        "url": "enlace6/enlace1.html",
+        "image": "images/anime6.jpg",
         "year": "2026",
         "genre": "Terror",
-        "duration": "2h",
-        "description": "Terror y suspenso en CinemaX.",
-        "deletedAt": "2026-10-12T03:16:36.995575+00:00"
+        "duration": "1h 45m",
+        "description": "Una experiencia de terror disponible en CinemaX.",
+        "deletedAt": "2026-10-12T03:16:36.995860+00:00"
     }
 ]
