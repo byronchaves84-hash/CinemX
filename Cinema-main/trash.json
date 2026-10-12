@@ -96,5 +96,18 @@
         "duration": "2h 20m",
         "description": "Una película de acción disponible en CinemaX.",
         "deletedAt": "2026-10-12T03:15:34.926971+00:00"
+    },
+    {
+        "id": "pelicula-12",
+        "title": "Película 12",
+        "type": "Película",
+        "category": "peliculas",
+        "url": "enlace12/enlace1.html",
+        "image": "images/anime12.jpg",
+        "year": "2026",
+        "genre": "Fantasía",
+        "duration": "2h",
+        "description": "Una aventura fantástica en CinemaX.",
+        "deletedAt": "2026-10-12T03:15:37.468383+00:00"
     }
 ]
