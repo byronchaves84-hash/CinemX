@@ -120,18 +120,6 @@
         "description": "Una película de acción disponible en CinemaX."
     },
     {
-        "id": "pelicula-14",
-        "title": "Película 14",
-        "type": "Película",
-        "category": "terror",
-        "url": "enlace14/enlace1.html",
-        "image": "images/anime14.jpg",
-        "year": "2026",
-        "genre": "Terror",
-        "duration": "1h 50m",
-        "description": "Terror disponible en CinemaX."
-    },
-    {
         "id": "pelicula-15",
         "title": "Película 15",
         "type": "Película",
