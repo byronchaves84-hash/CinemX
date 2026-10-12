@@ -48,18 +48,6 @@
         "description": "Terror y suspenso en CinemaX."
     },
     {
-        "id": "pelicula-8",
-        "title": "Película 8",
-        "type": "Película",
-        "category": "peliculas",
-        "url": "enlace8/enlace1.html",
-        "image": "images/anime8.jpg",
-        "year": "2026",
-        "genre": "Aventura",
-        "duration": "2h 15m",
-        "description": "Una aventura para disfrutar en CinemaX."
-    },
-    {
         "id": "pelicula-15",
         "title": "Película 15",
         "type": "Película",
