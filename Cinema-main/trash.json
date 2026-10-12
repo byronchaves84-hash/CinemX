@@ -174,5 +174,18 @@
         "duration": "1h 55m",
         "description": "Una historia que puedes descubrir en CinemaX.",
         "deletedAt": "2026-10-12T03:16:43.230891+00:00"
+    },
+    {
+        "id": "pelicula-7",
+        "title": "Película 7",
+        "type": "Película",
+        "category": "terror",
+        "url": "enlace7/enlace1.html",
+        "image": "images/anime7.jpeg",
+        "year": "2026",
+        "genre": "Terror",
+        "duration": "2h",
+        "description": "Terror y suspenso en CinemaX.",
+        "deletedAt": "2026-10-12T03:16:49.466922+00:00"
     }
 ]
