@@ -96,18 +96,6 @@
         "description": "Ciencia ficción disponible en CinemaX."
     },
     {
-        "id": "pelicula-12",
-        "title": "Película 12",
-        "type": "Película",
-        "category": "peliculas",
-        "url": "enlace12/enlace1.html",
-        "image": "images/anime12.jpg",
-        "year": "2026",
-        "genre": "Fantasía",
-        "duration": "2h",
-        "description": "Una aventura fantástica en CinemaX."
-    },
-    {
         "id": "pelicula-15",
         "title": "Película 15",
         "type": "Película",
