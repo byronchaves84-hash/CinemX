@@ -1,15 +1,15 @@
 [
     {
-        "id": "pelicula-4",
-        "title": "Película 4",
+        "id": "pelicula-5",
+        "title": "Película 5",
         "type": "Película",
         "category": "peliculas",
-        "url": "enlace4/enlace1.html",
-        "image": "images/anime4.jpg",
+        "url": "enlace5/enlace1.html",
+        "image": "images/anime5.jpg",
         "year": "2026",
-        "genre": "Drama",
-        "duration": "1h 55m",
-        "description": "Una historia que puedes descubrir en CinemaX."
+        "genre": "Acción",
+        "duration": "2h",
+        "description": "Una película disponible en CinemaX."
     },
     {
         "id": "pelicula-7",
