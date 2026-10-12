@@ -12,18 +12,6 @@
         "description": "Una película disponible en CinemaX."
     },
     {
-        "id": "pelicula-7",
-        "title": "Película 7",
-        "type": "Película",
-        "category": "terror",
-        "url": "enlace7/enlace1.html",
-        "image": "images/anime7.jpeg",
-        "year": "2026",
-        "genre": "Terror",
-        "duration": "2h",
-        "description": "Terror y suspenso en CinemaX."
-    },
-    {
         "id": "pelicula-15",
         "title": "Película 15",
         "type": "Película",
