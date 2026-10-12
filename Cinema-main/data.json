@@ -108,18 +108,6 @@
         "description": "Una aventura fantástica en CinemaX."
     },
     {
-        "id": "pelicula-13",
-        "title": "Película 13",
-        "type": "Película",
-        "category": "peliculas",
-        "url": "enlace13/enlace1.html",
-        "image": "images/anime13.jpg",
-        "year": "2026",
-        "genre": "Acción",
-        "duration": "2h 20m",
-        "description": "Una película de acción disponible en CinemaX."
-    },
-    {
         "id": "pelicula-15",
         "title": "Película 15",
         "type": "Película",
