@@ -938,5 +938,25 @@
         "timestamp": "2026-10-12T01:05:54.456734+00:00",
         "timestamp_epoch": 1791767154.4567442,
         "viewed_at": "2026-10-12T01:05:54.456744+00:00"
+    },
+    {
+        "id": "b944e8a9-1e74-40b1-8b8e-362dd86b5a48",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "walle",
+        "title": "WALL·E",
+        "type": "pelicula",
+        "image": "https://image.tmdb.org/t/p/original/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
+        "url": "",
+        "video": "",
+        "year": "2026",
+        "genre": "Aventura",
+        "duration": "2h",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "pmZwKgku4KOEYl1xEUdqiTSYAJ5iSCWknnoN5zRAOtc",
+        "timestamp": "2026-10-12T01:13:31.774620+00:00",
+        "timestamp_epoch": 1791767611.7746558,
+        "viewed_at": "2026-10-12T01:13:31.774656+00:00"
     }
 ]
