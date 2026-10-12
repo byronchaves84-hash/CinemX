@@ -1398,5 +1398,25 @@
         "timestamp": "2026-10-12T03:15:14.010619+00:00",
         "timestamp_epoch": 1791774914.0106409,
         "viewed_at": "2026-10-12T03:15:14.010641+00:00"
+    },
+    {
+        "id": "f8456841-e0f5-4f9b-a7fc-030cb2b86ad8",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "pelicula-4",
+        "title": "Película 4",
+        "type": "Película",
+        "image": "images/anime4.jpg",
+        "url": "enlace4/enlace1.html",
+        "video": "enlace4/enlace1.html",
+        "year": "2026",
+        "genre": "Drama",
+        "duration": "1h 55m",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "TiHn-BBlW1mlbJ6lDm6h0YTgmp-Poubp9ej45TmigGw",
+        "timestamp": "2026-10-12T03:15:14.459978+00:00",
+        "timestamp_epoch": 1791774914.4599903,
+        "viewed_at": "2026-10-12T03:15:14.459990+00:00"
     }
 ]
