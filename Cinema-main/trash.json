@@ -104,22 +104,5 @@
         "duration": "2h",
         "description": "Una película disponible en CinemaX.",
         "deletedAt": "2026-10-12T03:16:52.801479+00:00"
-    },
-    {
-        "title": "WALL-E",
-        "category": "pelicula",
-        "type": "pelicula",
-        "genre": "",
-        "year": "",
-        "image": "https://image.tmdb.org/t/p/original/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
-        "poster": "https://image.tmdb.org/t/p/original/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
-        "backdrop": "https://drive.google.com/file/d/1E9Db3llBhsLviqQzc2sdb4zKZfbiyvF0/view?usp=drive_link",
-        "rating": "",
-        "duration": "",
-        "description": "",
-        "featured": false,
-        "session_id": "8tddcJtiTORNSxP7kgCDOCF_kDBZfp2wvh1OOO3g3JQ",
-        "id": "wall-e",
-        "deletedAt": "2026-10-12T03:16:58.059380+00:00"
     }
 ]
