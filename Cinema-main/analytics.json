@@ -1018,5 +1018,25 @@
         "timestamp": "2026-10-12T01:17:15.503014+00:00",
         "timestamp_epoch": 1791767835.503023,
         "viewed_at": "2026-10-12T01:17:15.503023+00:00"
+    },
+    {
+        "id": "d014e35e-182f-4b44-9cc7-71d4762dd992",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "wall-e",
+        "title": "WALL-E",
+        "type": "pelicula",
+        "image": "https://image.tmdb.org/t/p/original/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
+        "url": "",
+        "video": "",
+        "year": "",
+        "genre": "pelicula",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "CrR693PlJyTFV79DrdcIvOZmk15pgpqeRLb1MVQGJW8",
+        "timestamp": "2026-10-12T01:19:08.082793+00:00",
+        "timestamp_epoch": 1791767948.082807,
+        "viewed_at": "2026-10-12T01:19:08.082807+00:00"
     }
 ]
