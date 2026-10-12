@@ -70,5 +70,18 @@
         "session_id": "g7HHUlBZPZbhmDRv-RGI5OYuURjUU95qYmc7BS5BSBQ",
         "id": "harry-potter",
         "deletedAt": "2026-09-09T22:07:45.971168+00:00"
+    },
+    {
+        "id": "pelicula-14",
+        "title": "Película 14",
+        "type": "Película",
+        "category": "terror",
+        "url": "enlace14/enlace1.html",
+        "image": "images/anime14.jpg",
+        "year": "2026",
+        "genre": "Terror",
+        "duration": "1h 50m",
+        "description": "Terror disponible en CinemaX.",
+        "deletedAt": "2026-10-12T03:04:59.562215+00:00"
     }
 ]
