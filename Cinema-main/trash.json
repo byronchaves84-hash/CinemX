@@ -122,5 +122,18 @@
         "duration": "2h",
         "description": "Drama y emoción en CinemaX.",
         "deletedAt": "2026-10-12T03:16:26.979220+00:00"
+    },
+    {
+        "id": "pelicula-9",
+        "title": "Película 9",
+        "type": "Película",
+        "category": "peliculas",
+        "url": "enlace9/enlace1.html",
+        "image": "images/anime9.jpg",
+        "year": "2026",
+        "genre": "Acción",
+        "duration": "2h 5m",
+        "description": "Acción y entretenimiento en CinemaX.",
+        "deletedAt": "2026-10-12T03:16:31.460540+00:00"
     }
 ]
