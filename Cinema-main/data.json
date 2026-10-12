@@ -1226,5 +1226,21 @@
         "featured": false,
         "session_id": "8tddcJtiTORNSxP7kgCDOCF_kDBZfp2wvh1OOO3g3JQ",
         "id": "wall-e"
+    },
+    {
+        "title": "Harry Potter",
+        "category": "serie",
+        "type": "serie",
+        "genre": "Magia",
+        "year": "",
+        "image": "https://image.tmdb.org/t/p/w500/6sASqcdrEHXxUhA3nFpjrRecPD2.jpg",
+        "poster": "https://image.tmdb.org/t/p/w500/6sASqcdrEHXxUhA3nFpjrRecPD2.jpg",
+        "backdrop": "",
+        "rating": "",
+        "duration": "",
+        "description": "",
+        "featured": false,
+        "session_id": "b-Nv5UgkeG6vo5VlQaYrui9DQn8QdyiMwqIEMrCIs5M",
+        "id": "harry-potter"
     }
 ]
