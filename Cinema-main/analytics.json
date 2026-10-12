@@ -898,5 +898,25 @@
         "timestamp": "2026-10-12T01:05:45.773008+00:00",
         "timestamp_epoch": 1791767145.7730231,
         "viewed_at": "2026-10-12T01:05:45.773023+00:00"
+    },
+    {
+        "id": "291bf065-434e-4894-8568-79de6b55e096",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "pelicula-16",
+        "title": "Moster inc",
+        "type": "pelicula",
+        "image": "https://image.tmdb.org/t/p/original/g3SgHEb5ej2MioGfYLrZVshF909.jpg",
+        "url": "enlace16/enlace1.html",
+        "video": "",
+        "year": "2026",
+        "genre": "Aventura",
+        "duration": "2h",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "0OAQtaxS-MXIoNbLQKk6GEsx1XFjC9ZBHz5me_p3pIo",
+        "timestamp": "2026-10-12T01:05:54.161122+00:00",
+        "timestamp_epoch": 1791767154.16115,
+        "viewed_at": "2026-10-12T01:05:54.161150+00:00"
     }
 ]
