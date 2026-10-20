@@ -1518,5 +1518,25 @@
         "timestamp": "2026-10-20T22:26:19.085860+00:00",
         "timestamp_epoch": 1792535179.0858786,
         "viewed_at": "2026-10-20T22:26:19.085879+00:00"
+    },
+    {
+        "id": "915edc8b-5253-4a1b-8fc6-991943c6b4d4",
+        "user_id": "5afe4dc2-f320-40ce-ae5d-829ea284fdbd",
+        "content_id": "harry-potter",
+        "title": "Harry Potter",
+        "type": "serie",
+        "image": "https://image.tmdb.org/t/p/w500/6sASqcdrEHXxUhA3nFpjrRecPD2.jpg",
+        "url": "",
+        "video": "https://drive.google.com/file/d/1_Wo09sQcSmSDucfzgwwAVxXCDtxGJiWS/preview",
+        "year": "2001",
+        "genre": "Magia",
+        "duration": "",
+        "rating": "",
+        "season": 1,
+        "episode": 1,
+        "session_id": "IL0fr2hudBzW4HN6GYP99Zgpu9tAXcyvKT13Lp-X6nA",
+        "timestamp": "2026-10-20T22:26:22.470588+00:00",
+        "timestamp_epoch": 1792535182.4706047,
+        "viewed_at": "2026-10-20T22:26:22.470604+00:00"
     }
 ]
