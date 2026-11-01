@@ -1678,5 +1678,25 @@
         "timestamp": "2026-11-01T21:43:53.883237+00:00",
         "timestamp_epoch": 1793569433.8832543,
         "viewed_at": "2026-11-01T21:43:53.883254+00:00"
+    },
+    {
+        "id": "4116f713-2a09-47bd-8f1f-198447355174",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "terror-3",
+        "title": "La Monja",
+        "type": "Terror",
+        "image": "../Cinema-main/images/terror3.jpg",
+        "url": "../Cinema-main/terror3/enlace1.html",
+        "video": "../Cinema-main/terror3/enlace1.html",
+        "year": "",
+        "genre": "Terror",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "BrnJCSXHtKaBVF5Jo6s4O8Jur1jIuLmO73dbUBrYut4",
+        "timestamp": "2026-11-01T21:43:54.315400+00:00",
+        "timestamp_epoch": 1793569434.3154192,
+        "viewed_at": "2026-11-01T21:43:54.315419+00:00"
     }
 ]
