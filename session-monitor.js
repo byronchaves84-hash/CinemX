@@ -1,253 +1,160 @@
+
 /* ============================================================
    CINEMAX - SESSION MONITOR
-   Desconexión global de usuarios
+   Protección de sesión y prevención de desconexiones falsas
    ============================================================ */
 
 (function () {
-
     "use strict";
-
 
     /* ========================================================
        CONFIGURACIÓN
        ======================================================== */
 
-    const SESSION_KEY =
-        "cinemax_session_id";
+    const SESSION_KEY = "cinemax_session_id";
+    const USER_KEY = "cinemax_current_user";
 
-    const USER_KEY =
-        "cinemax_current_user";
+    // Comprobar cada 30 segundos.
+    const CHECK_INTERVAL = 30000;
 
-    /*
-     * Comprobación cada 5 segundos.
-     */
-    const CHECK_INTERVAL =
-        5000;
+    // Respuestas inválidas consecutivas necesarias.
+    const MAX_INVALID_CHECKS = 3;
 
-    /*
-     * Cantidad de comprobaciones inválidas consecutivas
-     * necesarias antes de expulsar al usuario.
-     *
-     * 3 intentos = aproximadamente 15 segundos.
-     */
-    const MAX_INVALID_CHECKS =
-        3;
+    // Tiempo máximo de espera del servidor.
+    const REQUEST_TIMEOUT = 10000;
 
-
-    /*
-     * Login principal del sistema.
-     */
-    const LOGIN_PAGE =
-        "/login.html";
-
-
-    /*
-     * ========================================================
-       PÁGINAS EXCLUIDAS
-       ========================================================
-    */
+    const LOGIN_PAGE = "/login.html";
 
     const EXCLUDED_PAGES = [
-
         "admin2.html",
-
         "admin.html",
-
         "login.html"
-
     ];
 
+    let checkingSession = false;
+    let redirecting = false;
+    let invalidSessionChecks = 0;
+    let monitorStarted = false;
+    let monitorTimer = null;
 
-    let checkingSession =
-        false;
-
-
-    let redirecting =
-        false;
-
-
-    /*
-     * Contador de respuestas inválidas consecutivas.
-     *
-     * IMPORTANTE:
-     * Un error aislado NO desconecta al usuario.
-     */
-    let invalidSessionChecks =
-        0;
-
+    // Evita aplicar respuestas de una sesión anterior.
+    let sessionGeneration = 0;
 
     /* ========================================================
-       OBTENER ID DE SESIÓN
+       OBTENER SESIÓN
        ======================================================== */
 
     function getSessionId() {
-
-        return localStorage.getItem(
-            SESSION_KEY
-        );
-
-    }
-
-
-    /* ========================================================
-       LIMPIAR SESIÓN LOCAL
-       ======================================================== */
-
-    function clearLocalSession() {
-
         try {
-
-            localStorage.removeItem(
-                SESSION_KEY
-            );
-
-            localStorage.removeItem(
-                USER_KEY
-            );
-
-            sessionStorage.removeItem(
-                SESSION_KEY
-            );
-
+            return localStorage.getItem(SESSION_KEY);
         } catch (error) {
-
-            console.error(
-                "CINEMAX: error limpiando sesión local.",
-                error
-            );
-
+            console.error("CINEMAX: no se pudo leer la sesión.", error);
+            return null;
         }
-
     }
-
 
     /* ========================================================
        OBTENER PÁGINA ACTUAL
        ======================================================== */
 
     function getCurrentPage() {
-
         return window.location.pathname
             .split("/")
             .pop()
             .toLowerCase();
-
     }
-
-
-    /* ========================================================
-       COMPROBAR SI LA PÁGINA ESTÁ EXCLUIDA
-       ======================================================== */
 
     function isExcludedPage() {
-
-        const currentPage =
-            getCurrentPage();
-
-        return EXCLUDED_PAGES.includes(
-            currentPage
-        );
-
+        return EXCLUDED_PAGES.includes(getCurrentPage());
     }
 
+    /* ========================================================
+       LIMPIAR SESIÓN LOCAL
+       ======================================================== */
+
+    function clearLocalSession() {
+        try {
+            localStorage.removeItem(SESSION_KEY);
+            localStorage.removeItem(USER_KEY);
+            sessionStorage.removeItem(SESSION_KEY);
+
+            sessionGeneration++;
+            invalidSessionChecks = 0;
+
+        } catch (error) {
+            console.error(
+                "CINEMAX: error limpiando sesión.",
+                error
+            );
+        }
+    }
 
     /* ========================================================
-       REINICIAR CONTADOR DE ERRORES
+       REINICIAR CONTADOR
        ======================================================== */
 
     function resetInvalidChecks() {
-
-        if (
-            invalidSessionChecks !== 0
-        ) {
-
+        if (invalidSessionChecks > 0) {
             console.log(
-                "✅ CINEMAX: sesión confirmada nuevamente."
+                "CINEMAX: sesión recuperada."
             );
-
         }
 
-        invalidSessionChecks =
-            0;
-
+        invalidSessionChecks = 0;
     }
 
-
     /* ========================================================
-       FORZAR LOGOUT
+       FORZAR CIERRE DE SESIÓN
        ======================================================== */
 
-    function forceLogout(
-        reason
-    ) {
+    function forceLogout(reason) {
 
-        /*
-         * SEGURIDAD:
-         *
-         * Las páginas excluidas jamás
-         * serán redirigidas por este monitor.
-         */
-
-        if (
-            isExcludedPage()
-        ) {
-
+        if (isExcludedPage()) {
             console.log(
-                "🛡️ CINEMAX: página excluida del monitor:",
+                "CINEMAX: página excluida:",
                 getCurrentPage()
             );
-
             return;
-
         }
 
-
-        if (
-            redirecting
-        ) {
-
+        if (redirecting) {
             return;
-
         }
 
-
-        redirecting =
-            true;
-
+        redirecting = true;
 
         console.warn(
-            "🔌 CINEMAX: sesión desconectada.",
+            "CINEMAX: sesión cerrada.",
             reason || ""
         );
 
-
         clearLocalSession();
 
-
-        /*
-         * Si ya estamos en login.html,
-         * no hacemos otra redirección.
-         */
-
-        if (
-            getCurrentPage() ===
-            "login.html"
-        ) {
-
-            return;
-
+        if (getCurrentPage() !== "login.html") {
+            window.location.replace(LOGIN_PAGE);
         }
-
-
-        /*
-         * Redirección al login.
-         */
-
-        window.location.href =
-            LOGIN_PAGE;
-
     }
 
+    /* ========================================================
+       REGISTRAR RESPUESTA INVÁLIDA
+       ======================================================== */
+
+    function registerInvalidSession(reason) {
+
+        invalidSessionChecks++;
+
+        console.warn(
+            "CINEMAX: sesión inválida:",
+            invalidSessionChecks + "/" + MAX_INVALID_CHECKS,
+            reason || ""
+        );
+
+        if (invalidSessionChecks >= MAX_INVALID_CHECKS) {
+            forceLogout(
+                reason || "El servidor confirmó que la sesión no está activa."
+            );
+        }
+    }
 
     /* ========================================================
        COMPROBAR SESIÓN CONTRA EL SERVIDOR
@@ -255,265 +162,121 @@
 
     async function checkSession() {
 
-
-        /*
-         * ====================================================
-           ADMIN
-           ====================================================
-           
-           Admin2 y Admin1 no son expulsados por este monitor.
-        */
-
-        if (
-            isExcludedPage()
-        ) {
-
+        if (isExcludedPage()) {
             return;
-
         }
 
-
-        if (
-            checkingSession
-        ) {
-
+        if (checkingSession || redirecting) {
             return;
-
         }
 
+        const sessionId = getSessionId();
 
-        const sessionId =
-            getSessionId();
-
-
-        /*
-         * No hay sesión.
-         */
-
-        if (
-            !sessionId
-        ) {
-
+        // Si no existe sesión local, no inventamos una.
+        if (!sessionId) {
             return;
-
         }
 
+        const currentGeneration = sessionGeneration;
 
-        /*
-         * No comprobamos desde login.
-         */
+        checkingSession = true;
 
-        if (
-            getCurrentPage() ===
-            "login.html"
-        ) {
+        const controller = new AbortController();
 
-            return;
-
-        }
-
-
-        checkingSession =
-            true;
-
+        const timeout = setTimeout(function () {
+            controller.abort();
+        }, REQUEST_TIMEOUT);
 
         try {
 
+            const response = await fetch(
+                "/api/users/session/" +
+                encodeURIComponent(sessionId),
 
-            /*
-             * Endpoint de sesión.
-             */
+                {
+                    method: "GET",
 
-            const response =
-                await fetch(
+                    headers: {
+                        "X-Session-ID": sessionId
+                    },
 
-                    "/api/users/session/" +
-                    encodeURIComponent(
-                        sessionId
-                    ),
+                    credentials: "include",
 
-                    {
+                    cache: "no-store",
 
-                        method:
-                            "GET",
+                    signal: controller.signal
+                }
+            );
 
-                        headers: {
-
-                            "X-Session-ID":
-                                sessionId
-
-                        },
-
-                        credentials:
-                            "include",
-
-                        cache:
-                            "no-store"
-
-                    }
-
-                );
-
-
-            /* =================================================
-               RESPUESTA 401 / 403
-               ================================================= */
-
+            // La sesión pudo cambiar mientras esperábamos.
             if (
-                response.status ===
-                    401 ||
-                response.status ===
-                    403
+                currentGeneration !== sessionGeneration ||
+                getSessionId() !== sessionId
             ) {
-
-
-                invalidSessionChecks++;
-
-
-                console.warn(
-
-                    "⚠️ CINEMAX: comprobación de sesión inválida:",
-
-                    invalidSessionChecks +
-                    "/" +
-                    MAX_INVALID_CHECKS
-
-                );
-
-
-                /*
-                 * NO expulsamos inmediatamente.
-                 *
-                 * Esperamos varias confirmaciones.
-                 */
-
-                if (
-                    invalidSessionChecks <
-                    MAX_INVALID_CHECKS
-                ) {
-
-                    return;
-
-                }
-
-
-                /*
-                 * La sesión ha sido confirmada
-                 * como inválida varias veces.
-                 */
-
-                let data =
-                    null;
-
-
-                try {
-
-                    data =
-                        await response.json();
-
-                } catch (
-                    jsonError
-                ) {
-
-                    data =
-                        null;
-
-                }
-
-
-                forceLogout(
-
-                    data?.error ||
-                    data?.code ||
-                    "El servidor confirmó que la sesión ya no es válida."
-
-                );
-
-
                 return;
-
             }
 
-
-            /* =================================================
-               RESPUESTA CORRECTA
-               ================================================= */
+            /* ================================================
+               SESIÓN NO AUTORIZADA
+               ================================================ */
 
             if (
-                response.ok
+                response.status === 401 ||
+                response.status === 403
             ) {
 
+                registerInvalidSession(
+                    "HTTP " + response.status
+                );
 
-                let data =
-                    null;
+                return;
+            }
 
+            /* ================================================
+               RESPUESTA CORRECTA
+               ================================================ */
+
+            if (response.ok) {
+
+                let data;
 
                 try {
-
-                    data =
-                        await response.json();
-
-                } catch (
-                    jsonError
-                ) {
-
-                    data =
-                        null;
-
-                }
-
-
-                /*
-                 * Si el servidor dice explícitamente
-                 * active:false, contamos como inválido.
-                 */
-
-                if (
-                    data &&
-                    data.active === false
-                ) {
-
-
-                    invalidSessionChecks++;
-
+                    data = await response.json();
+                } catch (error) {
 
                     console.warn(
-
-                        "⚠️ CINEMAX: servidor indica sesión inactiva:",
-
-                        invalidSessionChecks +
-                        "/" +
-                        MAX_INVALID_CHECKS
-
+                        "CINEMAX: respuesta JSON inválida. No se desconecta."
                     );
 
-
-                    if (
-                        invalidSessionChecks >=
-                        MAX_INVALID_CHECKS
-                    ) {
-
-                        forceLogout(
-
-                            data.error ||
-                            data.code ||
-                            "La sesión ya no está activa."
-
-                        );
-
-                    }
-
-
                     return;
-
                 }
 
+                // Comprobar nuevamente que seguimos usando la misma sesión.
+                if (
+                    currentGeneration !== sessionGeneration ||
+                    getSessionId() !== sessionId
+                ) {
+                    return;
+                }
 
                 /*
-                 * Sesión válida.
-                 *
-                 * Reiniciamos inmediatamente
-                 * el contador de errores.
+                 * El servidor confirmó explícitamente
+                 * que la sesión está inactiva.
+                 */
+
+                if (data && data.active === false) {
+
+                    registerInvalidSession(
+                        data.error ||
+                        data.code ||
+                        "Sesión inactiva."
+                    );
+
+                    return;
+                }
+
+                /*
+                 * Sesión confirmada como válida.
                  */
 
                 if (
@@ -525,77 +288,96 @@
                     resetInvalidChecks();
 
                     console.log(
-                        "🔐 CINEMAX: sesión válida."
+                        "CINEMAX: sesión válida."
                     );
 
                     return;
-
                 }
 
-
                 /*
-                 * Si HTTP es correcto pero la
-                 * respuesta no tiene la estructura
-                 * esperada, NO expulsamos.
+                 * Respuesta inesperada:
+                 * nunca expulsar por falta de campos.
                  */
 
                 console.warn(
-
-                    "⚠️ CINEMAX: respuesta de sesión inesperada. No se desconecta.",
-
+                    "CINEMAX: respuesta inesperada. Se mantiene la sesión.",
                     data
-
                 );
 
-
                 return;
-
             }
 
-
-            /*
-             * Otros códigos HTTP.
-             *
-             * NO desconectamos automáticamente.
-             */
+            /* ================================================
+               OTROS ERRORES HTTP
+               ================================================ */
 
             console.warn(
-
-                "⚠️ CINEMAX: respuesta HTTP inesperada:",
-
-                response.status
-
+                "CINEMAX: error HTTP temporal:",
+                response.status,
+                "No se desconecta al usuario."
             );
-
 
         } catch (error) {
 
-
             /*
-             * MUY IMPORTANTE:
-             *
-             * Un error de red NO desconecta.
+             * Errores de red y timeout no son
+             * confirmación de sesión cerrada.
              */
 
-            console.warn(
+            if (error.name === "AbortError") {
 
-                "⚠️ CINEMAX: no se pudo comprobar la sesión.",
+                console.warn(
+                    "CINEMAX: tiempo de espera agotado. Se mantiene la sesión."
+                );
 
-                error
+            } else {
 
-            );
-
+                console.warn(
+                    "CINEMAX: error de conexión. Se mantiene la sesión.",
+                    error
+                );
+            }
 
         } finally {
 
-
-            checkingSession =
-                false;
-
+            clearTimeout(timeout);
+            checkingSession = false;
         }
-
     }
 
+    /* ========================================================
+       DETECTAR CAMBIO DE SESIÓN
+       ======================================================== */
+
+    window.addEventListener("storage", function (event) {
+
+        if (event.key === SESSION_KEY) {
+
+            sessionGeneration++;
+            invalidSessionChecks = 0;
+
+            console.log(
+                "CINEMAX: cambio de sesión detectado."
+            );
+        }
+    });
+
+    /* ========================================================
+       CONTROL DE VISIBILIDAD
+       ======================================================== */
+
+    document.addEventListener(
+        "visibilitychange",
+        function () {
+
+            if (
+                document.visibilityState === "visible" &&
+                !isExcludedPage()
+            ) {
+                checkSession();
+            }
+        }
+    );
 
     /* ========================================================
        INICIAR MONITOR
@@ -603,55 +385,25 @@
 
     function startSessionMonitor() {
 
-
-        /*
-         * Admin2/Admin1/login quedan completamente
-         * fuera del monitor.
-         */
-
-        if (
-            isExcludedPage()
-        ) {
-
-            console.log(
-
-                "🛡️ CINEMAX: monitor ignorado en:",
-
-                getCurrentPage()
-
-            );
-
+        if (monitorStarted || isExcludedPage()) {
             return;
-
         }
 
+        monitorStarted = true;
 
         console.log(
-            "🔐 CINEMAX: monitor de sesión iniciado."
+            "CINEMAX: monitor de sesión iniciado."
         );
 
-
-        /*
-         * Primera comprobación.
-         */
-
+        // Primera comprobación.
         checkSession();
 
-
-        /*
-         * Comprobación periódica.
-         */
-
-        setInterval(
-
+        // Comprobaciones periódicas.
+        monitorTimer = setInterval(
             checkSession,
-
             CHECK_INTERVAL
-
         );
-
     }
-
 
     /* ========================================================
        API GLOBAL
@@ -659,40 +411,48 @@
 
     window.CinemaXSessionMonitor = {
 
-        check:
-            checkSession,
+        check: checkSession,
 
-        logout:
-            forceLogout,
+        logout: forceLogout,
 
-        clear:
-            clearLocalSession
+        clear: clearLocalSession,
 
+        reset: resetInvalidChecks,
+
+        getSessionId: getSessionId,
+
+        stop: function () {
+
+            if (monitorTimer !== null) {
+                clearInterval(monitorTimer);
+                monitorTimer = null;
+            }
+
+            monitorStarted = false;
+
+            console.log(
+                "CINEMAX: monitor detenido."
+            );
+        },
+
+        start: startSessionMonitor
     };
-
 
     /* ========================================================
        ARRANQUE
        ======================================================== */
 
-    if (
-        document.readyState ===
-        "loading"
-    ) {
+    if (document.readyState === "loading") {
 
         document.addEventListener(
-
             "DOMContentLoaded",
-
-            startSessionMonitor
-
+            startSessionMonitor,
+            { once: true }
         );
 
     } else {
 
         startSessionMonitor();
-
     }
-
 
 })();
