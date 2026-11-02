@@ -48,8 +48,11 @@ PASSWORD_HASH_ITERATIONS = 310_000
 # 32 bytes de entropía para sesiones
 SESSION_BYTES = 32
 
+# Una sesión puede vivir como máximo 7 días
 SESSION_MAX_AGE = 60 * 60 * 24 * 7
-SESSION_IDLE_TIMEOUT = 60 * 60 * 12
+
+# Si pasan 4 horas sin actividad, la sesión expira
+SESSION_IDLE_TIMEOUT = 60 * 60 * 4
 
 # Rate limiting de login
 LOGIN_MAX_ATTEMPTS = 5
@@ -2019,10 +2022,9 @@ class CinemaXHandler(
                     SESSIONS_FILE,
                     sessions
                 )
-
-    # ========================================================
-    # REQUIRE ADMIN
-    # ========================================================
+# ========================================================
+# REQUIRE ADMIN
+# ========================================================
 
 
 def require_user(self, session_id=None):
