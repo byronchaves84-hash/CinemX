@@ -2109,7 +2109,7 @@ def require_user(self, session_id=None):
 
         return None, None
 
-    ):
+    def require_admin(self, session_id=None):
 
         try:
 
