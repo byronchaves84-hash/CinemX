@@ -2022,94 +2022,49 @@ class CinemaXHandler(
                     SESSIONS_FILE,
                     sessions
                 )
-# ========================================================
-# REQUIRE ADMIN
-# ========================================================
 
+    # ========================================================
+    # REQUIRE ADMIN
+    # ========================================================
 
-def require_user(self, session_id=None):
-    try:
-        if not session_id:
-            session_id = self.get_session_id_from_request()
-
-        if not session_id:
-            self.send_json({
-                "success": False,
-                "error": "Sesión requerida.",
-                "code": "SESSION_REQUIRED"
-            }, 401)
-            return None, None
-
-        # Leer, validar y actualizar bajo el mismo lock.
-        with SESSIONS_LOCK:
-            sessions = self.load_json_file(SESSIONS_FILE)
-
-            session = next(
-                (
-                    item for item in sessions
-                    if isinstance(item, dict)
-                    and hmac.compare_digest(
-                        clean_id(item.get("id")),
-                        clean_id(session_id)
-                    )
-                ),
-                None
-            )
-
+    def require_user(self, session_id=None):
+        try:
+            if not session_id:
+                session_id = self.get_session_id_from_request()
+            if not session_id:
+                self.send_json({"success": False, "error": "Sesión requerida.", "code": "SESSION_REQUIRED"}, 401)
+                return None, None
+            session, index = self.find_session(session_id)
             if session is None or not session_is_valid(session):
-                if session is not None:
-                    session["active"] = False
-                    session["expired_at"] = now_iso()
-                    self.save_json_file(SESSIONS_FILE, sessions)
-
-                self.send_json({
-                    "success": False,
-                    "error": "Sesión inválida o expirada.",
-                    "code": "INVALID_SESSION"
-                }, 401)
+                if session is not None and index is not None:
+                    sessions = self.load_sessions()
+                    if index < len(sessions):
+                        sessions[index]["active"] = False
+                        self.save_sessions(sessions)
+                self.send_json({"success": False, "error": "Sesión inválida o expirada.", "code": "INVALID_SESSION"}, 401)
                 return None, None
-
             user_id = clean_id(session.get("user_id"))
-
-            # CORRECCIÓN IMPORTANTE:
-            # Actualizar AMBOS relojes de actividad.
-            current = now_iso()
-            epoch = now_epoch()
-
-            session["last_activity"] = current
-            session["last_activity_epoch"] = epoch
-            session["active"] = True
-
-            if not self.save_json_file(SESSIONS_FILE, sessions):
-                self.send_json({
-                    "success": False,
-                    "error": "No se pudo actualizar la sesión."
-                }, 500)
+            user = self.find_user_by_id(user_id)
+            if user is None:
+                self.send_json({"success": False, "error": "Usuario no encontrado.", "code": "USER_NOT_FOUND"}, 401)
                 return None, None
-
-        user = self.find_user_by_id(user_id)
-
-        if user is None:
-            self.send_json({
-                "success": False,
-                "error": "Usuario no encontrado.",
-                "code": "USER_NOT_FOUND"
-            }, 401)
+            sessions = self.load_sessions()
+            for item in sessions:
+                if clean_id(item.get("id")) == clean_id(session_id):
+                    item["last_activity"] = now_iso()
+                    item["active"] = True
+                    break
+            self.save_sessions(sessions)
+            return user, session_id
+        except Exception as e:
+            print("❌ Error comprobando sesión de usuario:", e)
+            self.send_json({"success": False, "error": "Error verificando la sesión.", "details": str(e)}, 500)
             return None, None
 
-        return user, session_id
-
-    except Exception as e:
-        print("❌ Error comprobando sesión de usuario:", e)
-
-        self.send_json({
-            "success": False,
-            "error": "Error verificando la sesión."
-        }, 500)
-
-        return None, None
-
-    def require_admin(self, session_id=None):
+    def require_admin(
+        self,
+        session_id=None
+    ):
 
         try:
 
@@ -3706,136 +3661,191 @@ def require_user(self, session_id=None):
                 500
             )
 
-
     # ========================================================
     # CHECK SESSION
     # ========================================================
 
-    def check_session(self, session_id):
+    def check_session(
+        self,
+        session_id
+    ):
 
         try:
 
             session_id = (
                 clean_id(session_id)
-                or self.get_session_id_from_request()
+                or
+                self.get_session_id_from_request()
             )
 
             if not session_id:
 
-                self.send_json({
-                    "success": False,
-                    "active": False,
-                    "error": "Sesión no especificada."
-                }, 400)
+                self.send_json(
+                    {
+                        "success": False,
+                        "active": False,
+                        "error":
+                            "Sesión no especificada."
+                    },
+                    400
+                )
 
                 return
 
-            user = None
-            session_data = None
-            expired = False
-            user_missing = False
+            session, index = self.find_session(
+                session_id
+            )
 
+            if session is None:
+
+                self.send_json(
+                    {
+                        "success": False,
+                        "active": False,
+                        "error":
+                            "Sesión inválida.",
+                        "code":
+                            "INVALID_SESSION"
+                    },
+                    401
+                )
+
+                return
+
+            if not session_is_valid(
+                session
+            ):
+
+                with SESSIONS_LOCK:
+
+                    sessions = self.load_json_file(
+                        SESSIONS_FILE
+                    )
+
+                    if (
+                        index is not None
+                        and
+                        index < len(sessions)
+                    ):
+
+                        sessions[index][
+                            "active"
+                        ] = False
+
+                        sessions[index][
+                            "expired_at"
+                        ] = now_iso()
+
+                        self.save_json_file(
+                            SESSIONS_FILE,
+                            sessions
+                        )
+
+                self.send_json(
+                    {
+                        "success": False,
+                        "active": False,
+                        "error":
+                            "La sesión ha expirado.",
+                        "code":
+                            "SESSION_EXPIRED"
+                    },
+                    401
+                )
+
+                return
+
+            user_id = clean_id(
+                session.get("user_id")
+            )
+
+            user = self.find_user_by_id(
+                user_id
+            )
+
+            if user is None:
+
+                self.invalidate_user_sessions(
+                    user_id
+                )
+
+                self.send_json(
+                    {
+                        "success": False,
+                        "active": False,
+                        "error":
+                            "El usuario ya no existe.",
+                        "code":
+                            "USER_NOT_FOUND"
+                    },
+                    401
+                )
+
+                return
+
+            # Actualizar actividad
             with SESSIONS_LOCK:
 
                 sessions = self.load_json_file(
                     SESSIONS_FILE
                 )
 
-                if not isinstance(sessions, list):
-                    sessions = []
-
                 for stored in sessions:
 
-                    if clean_id(stored.get("id")) != session_id:
-                        continue
+                    if (
+                        clean_id(
+                            stored.get("id")
+                        )
+                        ==
+                        session_id
+                    ):
 
-                    if not stored.get("active", True):
+                        stored[
+                            "last_activity"
+                        ] = now_iso()
+
+                        stored[
+                            "last_activity_epoch"
+                        ] = now_epoch()
+
                         break
-
-                    if not session_is_valid(stored):
-
-                        stored["active"] = False
-                        stored["expired_at"] = now_iso()
-
-                        expired = True
-                        break
-
-                    user_id = clean_id(
-                        stored.get("user_id")
-                    )
-
-                    user = self.find_user_by_id(user_id)
-
-                    if user is None:
-
-                        stored["active"] = False
-                        stored["expired_at"] = now_iso()
-
-                        user_missing = True
-                        break
-
-                    # Renovar actividad
-                    stored["last_activity"] = now_iso()
-                    stored["last_activity_epoch"] = now_epoch()
-
-                    session_data = {
-                        "id": session_id,
-                        "user_id": user_id
-                    }
-
-                    break
 
                 self.save_json_file(
                     SESSIONS_FILE,
                     sessions
                 )
 
-            if expired:
-
-                self.send_json({
-                    "success": False,
-                    "active": False,
-                    "error": "La sesión ha expirado.",
-                    "code": "SESSION_EXPIRED"
-                }, 401)
-
-                return
-
-            if user_missing:
-
-                self.send_json({
-                    "success": False,
-                    "active": False,
-                    "error": "El usuario ya no existe.",
-                    "code": "USER_NOT_FOUND"
-                }, 401)
-
-                return
-
-            if session_data is None:
-
-                self.send_json({
-                    "success": False,
-                    "active": False,
-                    "error": "Sesión inválida.",
-                    "code": "INVALID_SESSION"
-                }, 401)
-
-                return
-
-            self.send_json({
-                "success": True,
-                "active": True,
-                "session_id": session_id,
-                "sessionId": session_id,
-                "token": session_id,
-                "user": {
-                    "id": session_data["user_id"],
-                    "username": user.get("username", ""),
-                    "email": user.get("email", ""),
-                    "role": user.get("role", "user")
+            self.send_json(
+                {
+                    "success": True,
+                    "active": True,
+                    "session_id":
+                        session_id,
+                    "sessionId":
+                        session_id,
+                    "token":
+                        session_id,
+                    "user": {
+                        "id":
+                            user_id,
+                        "username":
+                            user.get(
+                                "username",
+                                ""
+                            ),
+                        "email":
+                            user.get(
+                                "email",
+                                ""
+                            ),
+                        "role":
+                            user.get(
+                                "role",
+                                "user"
+                            )
+                    }
                 }
-            })
+            )
 
         except Exception as e:
 
@@ -3844,11 +3854,15 @@ def require_user(self, session_id=None):
                 e
             )
 
-            self.send_json({
-                "success": False,
-                "active": False,
-                "error": "Error comprobando sesión."
-            }, 500)
+            self.send_json(
+                {
+                    "success": False,
+                    "active": False,
+                    "error":
+                        "Error comprobando sesión."
+                },
+                500
+            )
 
     # ========================================================
     # LOGOUT
