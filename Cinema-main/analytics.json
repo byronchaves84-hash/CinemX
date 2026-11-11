@@ -1718,5 +1718,25 @@
         "timestamp": "2026-11-11T00:47:23.575439+00:00",
         "timestamp_epoch": 1794358043.5754497,
         "viewed_at": "2026-11-11T00:47:23.575450+00:00"
+    },
+    {
+        "id": "f1f6ef4b-0602-40e8-a7b9-45613eef9d50",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "pelicula-15",
+        "title": "Película 15",
+        "type": "Película",
+        "image": "images/anime15.jpg",
+        "url": "enlace15/enlace1.html",
+        "video": "enlace15/enlace1.html",
+        "year": "2026",
+        "genre": "Anime",
+        "duration": "1h 55m",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "45jGcn1HVzSPua6CMfEaf8hV1UxCAVl9rSGKj39HN-I",
+        "timestamp": "2026-11-11T00:47:24.030273+00:00",
+        "timestamp_epoch": 1794358044.0302806,
+        "viewed_at": "2026-11-11T00:47:24.030281+00:00"
     }
 ]
