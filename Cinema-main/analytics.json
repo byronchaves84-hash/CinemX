@@ -1738,5 +1738,25 @@
         "timestamp": "2026-11-11T00:47:24.030273+00:00",
         "timestamp_epoch": 1794358044.0302806,
         "viewed_at": "2026-11-11T00:47:24.030281+00:00"
+    },
+    {
+        "id": "d26d7a7d-67e8-4497-b962-75404e3a44e2",
+        "user_id": "6d1a3384-8d97-4c61-9281-abc025d7dd6b",
+        "content_id": "serie-2",
+        "title": "The Last Of Us",
+        "type": "serie",
+        "image": "https://cinemx.onrender.com/Cinema-main/images/serie2.jpg",
+        "url": "../Cinema-main/Serie2/index.html",
+        "video": "../Cinema-main/Serie2/index.html",
+        "year": "",
+        "genre": "Serie",
+        "duration": "",
+        "rating": "",
+        "season": "",
+        "episode": "",
+        "session_id": "45jGcn1HVzSPua6CMfEaf8hV1UxCAVl9rSGKj39HN-I",
+        "timestamp": "2026-11-11T00:47:43.378853+00:00",
+        "timestamp_epoch": 1794358063.3788614,
+        "viewed_at": "2026-11-11T00:47:43.378861+00:00"
     }
 ]
